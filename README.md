@@ -1,1 +1,64 @@
-# VertretungsApp-Website
+# KAG Vertretungsplan – Info-Website
+
+Statische Website mit Startseite, Impressum und Datenschutzerklärung für die Web-App
+[KAG Vertretungsplan](https://vertretung-kag.vercel.app).
+
+Reines HTML/CSS: kein Build-Schritt, keine Cookies, keine Analytics, keine externen Skripte oder Schriften.
+
+| Datei | URL |
+| --- | --- |
+| `index.html` | `/` |
+| `impressum.html` | `/impressum` |
+| `datenschutz.html` | `/datenschutz` |
+| `404.html` | Fehlerseite |
+| `styles.css`, `favicon.svg` | gemeinsame Gestaltung |
+| `vercel.json` | saubere URLs ohne `.html` und Sicherheits-Header (u. a. strikte Content-Security-Policy) |
+
+## Lokal ansehen
+
+```sh
+python3 -m http.server 8000
+# http://localhost:8000/impressum.html
+```
+
+(Die Adressen ohne `.html` funktionieren erst auf Vercel durch `cleanUrls`.)
+
+## Kostenlos auf Vercel hosten (zweites Projekt)
+
+1. Dieses Repository auf GitHub pushen.
+2. In Vercel: **Add New… → Project** → dieses Repository importieren.
+3. Framework Preset: **Other**. Build Command und Output Directory leer lassen
+   (Root Directory = Repository-Wurzel). **Deploy**.
+4. Optional unter **Settings → Domains** einen sprechenden Namen vergeben,
+   z. B. `vertretung-kag-info.vercel.app` oder eine eigene Domain.
+5. **Web Analytics und Speed Insights in diesem Projekt NICHT aktivieren**
+   (die Datenschutzerklärung sagt, dass die Info-Seite keine Statistik nutzt).
+6. In der App unter Einstellungen bzw. in der Fußzeile auf `/impressum` und
+   `/datenschutz` dieser Seite verlinken – beide sollten von jeder Seite der App
+   aus mit einem Klick erreichbar sein.
+
+Alternativ: Die drei HTML-Dateien plus `styles.css`/`favicon.svg` in den
+`public/`-Ordner der App kopieren; dann liegen Impressum und Datenschutz direkt
+unter `vertretung-kag.vercel.app/impressum` (dort ggf. `.html` im Link angeben
+oder `cleanUrls` in der App-Konfiguration setzen).
+
+## Vor der Veröffentlichung: Platzhalter ersetzen
+
+Alle Platzhalter sind im Quelltext als `<span class="ph">[…]</span>` markiert und
+auf der Seite gelb hervorgehoben. Suche: `grep -n 'class="ph"' *.html`
+
+| Platzhalter | Datei(en) |
+| --- | --- |
+| `[VOR- UND NACHNAME]`, `[STRASSE HAUSNUMMER]`, `[PLZ ORT]` | impressum, datenschutz |
+| `[E-MAIL]` (auch im `mailto:`-Link!) | impressum, datenschutz |
+| `[OPTIONAL: TELEFONNUMMER …]` | impressum |
+| `[STAND-DATUM …]` (2×) | datenschutz |
+| `[REGION PRÜFEN …]` Vercel-Serverfunktionen | datenschutz, Abschnitt 2 |
+| `[SPEICHERDAUER LAUT VERCEL-TARIF PRÜFEN]` | datenschutz, Abschnitt 2 |
+| `[ANSCHRIFT UPSTASH PRÜFEN]`, `[REGION PRÜFEN …]` Upstash | datenschutz, Abschnitt 5.1 |
+| `[OPTIONAL: … nach X Monaten …]` | datenschutz, Abschnitt 5.3 |
+| `[PRÜFEN: … Speicherdauer Plan …]` | datenschutz, Abschnitt 8 |
+
+Danach kann die Klasse `ph` und ihr CSS-Block gelöscht werden.
+
+Kein Ersatz für Rechtsberatung – siehe Prüfliste in der Projektbeschreibung.
