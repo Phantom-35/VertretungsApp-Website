@@ -49,14 +49,6 @@ auf der Seite gelb hervorgehoben. Suche: `grep -n 'class="ph"' *.html`
 
 | Platzhalter | Datei(en) |
 | --- | --- |
-| `[VOR- UND NACHNAME]`, `[STRASSE HAUSNUMMER]`, `[PLZ ORT]` | impressum, datenschutz |
-| `[E-MAIL]` (auch im `mailto:`-Link!) | impressum, datenschutz |
-| `[OPTIONAL: TELEFONNUMMER …]` | impressum |
-| `[STAND-DATUM …]` (2×) | datenschutz |
-| `[REGION PRÜFEN …]` Vercel-Serverfunktionen | datenschutz, Abschnitt 2 |
-| `[SPEICHERDAUER LAUT VERCEL-TARIF PRÜFEN]` | datenschutz, Abschnitt 2 |
-| `[ANSCHRIFT UPSTASH PRÜFEN]`, `[REGION PRÜFEN …]` Upstash | datenschutz, Abschnitt 5.1 |
-| `[OPTIONAL: … nach X Monaten …]` | datenschutz, Abschnitt 5.3 |
 | `[PRÜFEN: … Speicherdauer Plan …]` | datenschutz, Abschnitt 8 |
 
 Danach kann die Klasse `ph` und ihr CSS-Block gelöscht werden.
