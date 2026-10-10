@@ -42,15 +42,10 @@ Alternativ: Die drei HTML-Dateien plus `styles.css`/`favicon.svg` in den
 unter `vertretung-kag.vercel.app/impressum` (dort ggf. `.html` im Link angeben
 oder `cleanUrls` in der App-Konfiguration setzen).
 
-## Vor der Veröffentlichung: Platzhalter ersetzen
+## Platzhalter
 
-Alle Platzhalter sind im Quelltext als `<span class="ph">[…]</span>` markiert und
-auf der Seite gelb hervorgehoben. Suche: `grep -n 'class="ph"' *.html`
-
-| Platzhalter | Datei(en) |
-| --- | --- |
-| `[PRÜFEN: … Speicherdauer Plan …]` | datenschutz, Abschnitt 8 |
-
-Danach kann die Klasse `ph` und ihr CSS-Block gelöscht werden.
+Alle Platzhalter sind ersetzt (Stand: 10. Oktober 2026). Für künftige Platzhalter
+gibt es die CSS-Klasse `ph` (gelbe Markierung). Prüfen mit:
+`grep -n 'class="ph"' *.html` – die Suche sollte nichts finden.
 
 Kein Ersatz für Rechtsberatung – siehe Prüfliste in der Projektbeschreibung.

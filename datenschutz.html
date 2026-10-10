@@ -160,10 +160,15 @@
 
       <!-- 8 -->
       <h2 id="plandaten">8. Daten aus dem Vertretungsplan (Lehrkräfte-Kürzel)</h2>
-      <p>Der Vertretungsplan enthält Kürzel von Lehrkräften sowie Klassen, Räume und Fächer. Diese Angaben stammen aus dem von der Schule öffentlich bereitgestellten Plan (Art. 14 Abs. 2 lit. f DSGVO) und werden ausschließlich angezeigt, um Schülerinnen und Schülern den Plan übersichtlich und gefiltert zur Verfügung zu stellen.</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in der übersichtlichen Bereitstellung bereits öffentlich zugänglicher schulorganisatorischer Informationen. Es werden nur Kürzel verarbeitet, keine Klarnamen; es findet keine Auswertung über einzelne Lehrkräfte statt.<br>
-      <strong>Speicherdauer:</strong> Der Server hält den Plan nur so lange vor, wie er für die Anzeige und das Erkennen von Änderungen benötigt wird <span class="ph">[PRÜFEN: z. B. „bis zur nächsten Aktualisierung, höchstens X Tage“]</span>. Auf deinem Gerät wird die Offline-Kopie bei der nächsten Aktualisierung überschrieben.<br>
-      Betroffene Lehrkräfte können der Verarbeitung nach Art. 21 DSGVO widersprechen; bitte wende dich dazu an die oben genannte E-Mail-Adresse.</p>
+      <p>Der Vertretungsplan enthält Kürzel von Lehrkräften sowie Klassen, Räume und Fächer. Diese Angaben stammen aus dem von der Schule öffentlich bereitgestellten Plan (Art. 14 Abs. 2 lit. f DSGVO). Sie werden ausschließlich verwendet, um Schülerinnen und Schülern den Plan übersichtlich und gefiltert anzuzeigen und sie über Änderungen zu benachrichtigen.</p>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt in der übersichtlichen Bereitstellung bereits öffentlich zugänglicher schulorganisatorischer Informationen. Es werden nur Kürzel verarbeitet, keine Klarnamen; es findet keine Auswertung über einzelne Lehrkräfte statt.</p>
+      <p><strong>Speicherdauer:</strong> Der Plan wird nicht dauerhaft gespeichert, und es entsteht kein Verlauf:</p>
+      <ul>
+        <li><strong>Server:</strong> Der Server hält den abgerufenen Plan höchstens 5 Minuten im Arbeitsspeicher. Das Servernetz von Vercel speichert die Antwort zusätzlich höchstens 60 Sekunden zwischen (während einer Neuladung bis zu weitere 4 Minuten).</li>
+        <li><strong>Benachrichtigungen:</strong> Um Änderungen zu erkennen, liegt in der Datenbank bei Upstash (siehe <a href="#push-daten">Abschnitt 5.1</a>) eine Liste der Einträge ab dem aktuellen Tag (Datum, Klasse, Stunde, Art der Änderung, Lehrkraft-Kürzel, Raum, Fach, Hinweistext). Diese Liste wird bei jeder Prüfung, etwa alle 10 Minuten, vollständig überschrieben; Einträge vergangener Tage werden dabei entfernt.</li>
+        <li><strong>Dein Gerät:</strong> Die Offline-Kopie des zuletzt geladenen Plans wird bei jedem Laden überschrieben und mit „App zurücksetzen“ gelöscht (siehe <a href="#lokal">Abschnitt 4</a>).</li>
+      </ul>
+      <p>Betroffene Lehrkräfte können der Verarbeitung nach Art. 21 DSGVO widersprechen; bitte wende dich dazu an die oben genannte E-Mail-Adresse.</p>
 
       <!-- 9 -->
       <h2 id="kontakt">9. Kontakt per E-Mail</h2>
@@ -198,6 +203,7 @@
             <tr><td>Nutzungsstatistik</td><td>Vercel</td><td>Art. 6 Abs. 1 lit. f</td><td>Besucher-Hash nach 24 h; nur aggregierte Werte bleiben</td></tr>
             <tr><td>Auswahl, Einstellungen, Offline-Plan</td><td>nur dein Gerät</td><td>§ 25 Abs. 2 Nr. 2 TDDDG</td><td>„App zurücksetzen“ oder Browserdaten löschen</td></tr>
             <tr><td>Push-Anmeldung und -Auswahl</td><td>Upstash</td><td>Art. 6 Abs. 1 lit. a</td><td>beim Ausschalten oder wenn ungültig</td></tr>
+            <tr><td>Einträge des Vertretungsplans</td><td>Vercel (Arbeitsspeicher, CDN), Upstash</td><td>Art. 6 Abs. 1 lit. f</td><td>max. 5 Min. bzw. bei jeder Prüfung (ca. alle 10 Min.) überschrieben; vergangene Tage entfernt</td></tr>
             <tr><td>E-Mail-Anfragen</td><td>Postfach des Betreibers</td><td>Art. 6 Abs. 1 lit. f / c</td><td>nach Erledigung</td></tr>
           </tbody>
         </table>
