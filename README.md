@@ -1,6 +1,6 @@
 # KAG Vertretungsplan – Info-Website
 
-Statische Website mit Startseite, Impressum und Datenschutzerklärung für die Web-App
+Statische Website mit Startseite, Hilfe, Impressum und Datenschutzerklärung für die Web-App
 [KAG Vertretungsplan](https://vertretung-kag.vercel.app).
 
 Reines HTML/CSS: kein Build-Schritt, keine Cookies, keine Analytics, keine externen Skripte oder Schriften.
@@ -8,6 +8,7 @@ Reines HTML/CSS: kein Build-Schritt, keine Cookies, keine Analytics, keine exter
 | Datei | URL |
 | --- | --- |
 | `index.html` | `/` |
+| `hilfe.html` | `/hilfe` |
 | `impressum.html` | `/impressum` |
 | `datenschutz.html` | `/datenschutz` |
 | `404.html` | Fehlerseite |

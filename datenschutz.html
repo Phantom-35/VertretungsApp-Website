@@ -18,6 +18,7 @@
     <nav class="site-nav" aria-label="Hauptnavigation">
       <ul>
         <li><a href="/">Start</a></li>
+        <li><a href="/hilfe">Hilfe</a></li>
         <li><a href="/impressum">Impressum</a></li>
         <li><a href="/datenschutz" aria-current="page">Datenschutz</a></li>
       </ul>
@@ -27,7 +28,7 @@
   <main id="inhalt">
     <article class="card">
       <h1>Datenschutzerklärung</h1>
-      <p class="muted">Stand: 10. Oktober 2026</p>
+      <p class="muted">Stand: 15. Oktober 2026</p>
 
       <p>Diese Datenschutzerklärung gilt für die Web-App „KAG Vertretungsplan“ unter <a href="https://vertretung-kag.vercel.app" rel="noopener">vertretung-kag.vercel.app</a> (im Folgenden „App“) und für diese Informationsseite. Sie erklärt, welche personenbezogenen Daten dabei verarbeitet werden, wozu, auf welcher Rechtsgrundlage und welche Rechte du hast.</p>
 
@@ -35,10 +36,10 @@
         <h2 id="kurzfassung">Das Wichtigste in Kürze</h2>
         <ul>
           <li>Kein Konto, keine Namen, keine E-Mail-Adressen, keine Cookies, keine Werbung, kein Tracking.</li>
-          <li>Deine Klasse, Kurse und Einstellungen werden nur auf deinem Gerät gespeichert.</li>
+          <li>Deine Klasse, Kurse und Einstellungen werden auf deinem Gerät gespeichert – auf dem Server nur, wenn du Benachrichtigungen einschaltest.</li>
           <li>Beim Aufruf fallen technisch notwendige Server-Logdaten (u. a. IP-Adresse) beim Hoster Vercel an.</li>
           <li>Die App erstellt eine anonyme Nutzungsstatistik ohne Cookies.</li>
-          <li>Nur wenn du Push-Benachrichtigungen einschaltest, werden deine Push-Adresse und deine Auswahl auf einem Server gespeichert. Schaltest du Push aus, werden diese Daten gelöscht.</li>
+          <li>Nur wenn du Push-Benachrichtigungen einschaltest, werden deine Push-Adresse und deine Auswahl auf einem Server gespeichert. Schaltest du Push aus oder setzt du die App zurück, werden diese Daten sofort gelöscht.</li>
         </ul>
       </div>
 
@@ -53,7 +54,7 @@
           <li><a href="#kinder">Kinder und Jugendliche</a></li>
           <li><a href="#planabruf">Abruf des Vertretungsplans und Zeitdienst</a></li>
           <li><a href="#plandaten">Daten aus dem Vertretungsplan (Lehrkräfte-Kürzel)</a></li>
-          <li><a href="#kontakt">Kontakt per E-Mail</a></li>
+          <li><a href="#kontakt">Kontakt per E-Mail und Feedback aus der App</a></li>
           <li><a href="#nicht">Was nicht stattfindet</a></li>
           <li><a href="#drittland">Empfänger und Übermittlung in Drittländer</a></li>
           <li><a href="#speicherdauer">Übersicht: Daten und Speicherdauer</a></li>
@@ -96,6 +97,7 @@
       <ul>
         <li>Es werden <strong>keine Cookies</strong> gesetzt und <strong>keine Kennungen auf deinem Gerät gespeichert</strong>.</li>
         <li>Besucher werden nur über einen Hash-Wert (eine Art Prüfsumme) erkannt, der aus der Anfrage gebildet wird und sich täglich ändert. Die Zuordnung wird nach spätestens 24 Stunden verworfen. Ein Wiedererkennen über mehrere Tage oder über andere Websites hinweg findet nicht statt.</li>
+        <li>Gezählt werden Seitenaufrufe; die Startseite der App wird dabei getrennt danach gezählt, ob sie als installierte App oder im Browser geöffnet wurde.</li>
         <li>Erfasst werden: aufgerufene Seite, Zeitpunkt, Referrer, Land/Region, Browser und Betriebssystem jeweils mit Version, Gerätetyp.</li>
         <li>Die Auswertung erfolgt ausschließlich zusammengefasst (aggregiert); Rückschlüsse auf einzelne Personen sind nicht vorgesehen.</li>
       </ul>
@@ -105,32 +107,35 @@
 
       <!-- 4 -->
       <h2 id="lokal">4. Speicherung auf deinem Gerät</h2>
-      <p>Damit die App sich deine Auswahl merkt und auch ohne Internetverbindung funktioniert, speichert sie Daten <strong>lokal im Speicher deines Browsers</strong> (localStorage und sessionStorage; zusätzlich den Offline-Zwischenspeicher der App über einen sogenannten Service Worker). Es werden <strong>keine Cookies</strong> verwendet. Diese Daten bleiben auf deinem Gerät und werden <strong>nicht an den Server übertragen</strong>.</p>
+      <p>Damit die App sich deine Auswahl merkt und auch ohne Internetverbindung funktioniert, speichert sie Daten <strong>lokal im Speicher deines Browsers</strong> (localStorage und sessionStorage; zusätzlich den Offline-Zwischenspeicher der App über einen sogenannten Service Worker). Es werden <strong>keine Cookies</strong> verwendet. Die Einträge im Browser-Speicher beginnen mit <code>kag:</code>. Diese Daten bleiben auf deinem Gerät und werden <strong>nicht an den Server übertragen</strong> – mit einer Ausnahme: Wenn du Benachrichtigungen einschaltest, werden die in <a href="#push-daten">Abschnitt 5.1</a> genannten Angaben an den Server geschickt.</p>
       <p>Gespeichert werden:</p>
       <ul>
         <li>die gewählte Klasse und die gewählten Kurs-Lehrkräfte,</li>
-        <li>Einstellungen (Design, Schriftgröße, gewünschte Benachrichtigungsarten),</li>
+        <li>eine andere Klasse, die du dir gerade ansiehst (nur bis zum Schließen, im sessionStorage),</li>
+        <li>Einstellungen: Hell/Dunkel, Textgröße, ab wann der nächste Schultag gezeigt wird, „Neu“-Markierungen, gewünschte Benachrichtigungsarten, tägliche Überblicke und ihre Uhrzeiten,</li>
         <li>eine Offline-Kopie des Vertretungsplans,</li>
         <li>bereits gesehene Einträge (für die Markierung „Neu“),</li>
         <li>ob die Einführung bereits abgeschlossen wurde,</li>
-        <li>ein Zähler der Besuche in diesem Browser (um dir zu einem passenden Zeitpunkt einmalig anzubieten, die App zu installieren).</li>
+        <li>ein Zähler der Besuche in diesem Browser (um dir zu einem passenden Zeitpunkt einmalig anzubieten, die App zu installieren),</li>
+        <li>über den Service Worker: eine Offline-Kopie der App selbst und die Zahl, die am App-Symbol angezeigt wird.</li>
       </ul>
       <p><strong>Rechtsgrundlage:</strong> Das Speichern und Auslesen dieser Informationen auf deinem Gerät ist nach § 25 Abs. 2 Nr. 2 des Telekommunikation-Digitale-Dienste-Datenschutz-Gesetzes (TDDDG) ohne Einwilligung zulässig, weil es unbedingt erforderlich ist, um den von dir ausdrücklich gewünschten Dienst bereitzustellen (gefilterte Anzeige, deine Einstellungen, Offline-Nutzung). Soweit dabei personenbezogene Daten verarbeitet werden, ist Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO.<br>
-      <strong>Löschung:</strong> Du kannst alle lokal gespeicherten Daten jederzeit über <strong>Einstellungen → „App zurücksetzen“</strong> löschen. Alternativ kannst du die Website-Daten in deinem Browser löschen oder die installierte App entfernen. sessionStorage wird beim Schließen des Tabs automatisch geleert.</p>
+      <strong>Löschung:</strong> Du kannst alle lokal gespeicherten Daten jederzeit über <strong>Einstellungen → „Über die App“ → „App zurücksetzen“</strong> löschen. Alternativ kannst du die Website-Daten in deinem Browser löschen oder die installierte App entfernen. sessionStorage wird beim Schließen des Tabs automatisch geleert.</p>
 
       <!-- 5 -->
       <h2 id="push">5. Push-Benachrichtigungen</h2>
-      <p>Die App kann dich über Änderungen im Vertretungsplan per Push-Benachrichtigung informieren. Das geschieht <strong>nur, wenn du die Funktion selbst einschaltest</strong> und dein Browser bzw. Betriebssystem dir die Erlaubnis dafür abfragt.</p>
+      <p>Die App kann dich über Änderungen im Vertretungsplan per Push-Benachrichtigung informieren. Das geschieht <strong>nur, wenn du die Funktion selbst einschaltest</strong> (in der App unter Einstellungen → „Benachrichtigungen“) und dein Browser bzw. Betriebssystem dir die Erlaubnis dafür abfragt.</p>
 
       <h3 id="push-daten">5.1 Welche Daten gespeichert werden</h3>
-      <p>Wenn du Push einschaltest, werden folgende Daten auf einem Server gespeichert:</p>
+      <p>Wenn du Push einschaltest, werden je Gerät folgende Daten auf einem Server gespeichert:</p>
       <ul>
         <li>deine Push-Adresse: die vom Push-Dienst deines Browsers vergebene Adresse (Endpoint-URL) sowie die zugehörigen technischen Schlüssel zur Verschlüsselung,</li>
-        <li>deine Klasse und die gewählten Lehrkräfte-Kürzel deiner Kurse,</li>
-        <li>die gewählten Benachrichtigungsarten und ob du eine Abend- und/oder Morgenübersicht möchtest,</li>
+        <li>deine Klasse und – in der Oberstufe – die Kürzel der gewählten Lehrkräfte deiner Kurse,</li>
+        <li>deine Benachrichtigungs-Einstellungen: über welche Arten von Änderungen du informiert werden möchtest (Ausfälle &amp; EVA, Vertretungen &amp; Betreuung, Raumänderungen &amp; Verlegungen, Klausuren &amp; Veranstaltungen), ob du den Überblick am Abend und/oder am Morgen möchtest und zu welcher Uhrzeit (abends 17, 18, 19 oder 20 Uhr; morgens 6:00, 6:30 oder 7:00 Uhr),</li>
         <li>die Zeitpunkte der Anmeldung, der letzten Änderung und der letzten Testnachricht.</li>
       </ul>
       <p>Es werden <strong>keine Namen, keine E-Mail-Adressen und kein Benutzerkonto</strong> gespeichert. Die Push-Adresse enthält keine direkt identifizierenden Angaben, ist aber eine eindeutige Gerätekennung und wird daher als personenbezogenes Datum behandelt.</p>
+      <p>Außerdem speichert der Server Daten <strong>ohne Bezug zu einzelnen Personen</strong>: den zuletzt gelesenen Vertretungsplan, um Änderungen zu erkennen (siehe <a href="#plandaten">Abschnitt 8</a>), und kleine Verwaltungswerte, z. B. den Zeitpunkt der letzten Prüfung.</p>
       <p>Die Daten werden in einer Datenbank von <strong>Upstash, Inc.</strong> (Delaware-Gesellschaft mit Sitz in Kalifornien, USA; Datenschutzkontakt: <a href="mailto:privacy@upstash.com">privacy@upstash.com</a>), gespeichert (Serverstandort: Frankfurt am Main, Deutschland). Upstash ist als Auftragsverarbeiter nach Art. 28 DSGVO tätig. Weitere Informationen: <a href="https://upstash.com/trust/privacy.pdf" rel="noopener">Datenschutzerklärung von Upstash</a>.</p>
 
       <h3 id="push-zustellung">5.2 Zustellung über den Push-Dienst deines Geräts</h3>
@@ -141,12 +146,12 @@
         <li>Firefox: Mozilla Push Service (Mozilla Corporation),</li>
         <li>Edge unter Windows: Windows Push Notification Services (Microsoft Corporation).</li>
       </ul>
-      <p>Der Inhalt der Nachrichten wird nach dem Web-Push-Standard <strong>Ende-zu-Ende verschlüsselt</strong>; der Push-Dienst kann ihn nicht lesen. Er verarbeitet jedoch die Push-Adresse sowie technische Metadaten (z. B. Zeitpunkt und Größe der Nachricht) und – im Rahmen der Verbindung zu deinem Gerät – deine IP-Adresse. Für diese Verarbeitung gelten die Datenschutzbestimmungen des jeweiligen Anbieters, mit dem du über deinen Browser bzw. dein Betriebssystem ohnehin verbunden bist.</p>
+      <p>Der Inhalt der Nachrichten wird nach dem Web-Push-Standard <strong>Ende-zu-Ende verschlüsselt</strong>; der Push-Dienst kann ihn nicht lesen. Eine Nachricht enthält nur die Änderungen des Plans für deine gewählte Klasse. Er verarbeitet jedoch die Push-Adresse sowie technische Metadaten (z. B. Zeitpunkt und Größe der Nachricht) und – im Rahmen der Verbindung zu deinem Gerät – deine IP-Adresse. Für diese Verarbeitung gelten die Datenschutzbestimmungen des jeweiligen Anbieters, mit dem du über deinen Browser bzw. dein Betriebssystem ohnehin verbunden bist.</p>
 
       <h3 id="push-recht">5.3 Rechtsgrundlage, Widerruf und Löschung</h3>
       <p><strong>Rechtsgrundlage</strong> ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und, für das Anlegen der Push-Anmeldung auf deinem Gerät, § 25 Abs. 1 TDDDG.</p>
-      <p><strong>Widerruf:</strong> Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem du Push-Benachrichtigungen in der App ausschaltest. Deine Anmeldung wird dann <strong>vom Server gelöscht</strong>. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt unberührt. Entziehst du die Berechtigung nur in den Browser- oder Systemeinstellungen, wird die Anmeldung spätestens beim nächsten Zustellversuch als ungültig erkannt und gelöscht.</p>
-      <p><strong>Speicherdauer:</strong> Die Daten werden gespeichert, bis du Push ausschaltest oder der Push-Dienst die Anmeldung als ungültig meldet (z. B. nach Deinstallation der App oder Löschen der Browserdaten); ungültige Anmeldungen werden automatisch gelöscht.</p>
+      <p><strong>Widerruf:</strong> Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem du Push-Benachrichtigungen in der App ausschaltest oder die App über „App zurücksetzen“ zurücksetzt. Deine Anmeldung wird dann <strong>sofort vom Server gelöscht</strong>. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt unberührt. Entziehst du die Berechtigung nur in den Browser- oder Systemeinstellungen, wird die Anmeldung spätestens beim nächsten Zustellversuch als ungültig erkannt und gelöscht.</p>
+      <p><strong>Speicherdauer:</strong> Die Daten werden gespeichert, bis du Push ausschaltest, die App zurücksetzt oder der Push-Dienst die Anmeldung als ungültig meldet (z. B. nach Deinstallation der App oder Löschen der Browserdaten); ungültige Anmeldungen werden automatisch gelöscht.</p>
 
       <!-- 6 -->
       <h2 id="kinder">6. Kinder und Jugendliche</h2>
@@ -155,7 +160,7 @@
 
       <!-- 7 -->
       <h2 id="planabruf">7. Abruf des Vertretungsplans und Zeitdienst</h2>
-      <p>Der Server der App lädt den öffentlich zugänglichen Vertretungsplan von der Website der Schule. Dieser Abruf erfolgt durch den Server, nicht durch dein Gerät; <strong>deine IP-Adresse oder andere Daten von dir werden dabei nicht an die Schule weitergegeben</strong>.</p>
+      <p>Der Server der App lädt den öffentlich zugänglichen Vertretungsplan von den öffentlichen Untis-Seiten der Schule. Dieser Abruf erfolgt durch den Server, nicht durch dein Gerät; <strong>deine IP-Adresse oder andere Daten von dir werden dabei nicht an die Schule weitergegeben</strong>.</p>
       <p>Damit Änderungen auch ohne geöffnete App erkannt werden, ruft der Zeitdienst <strong>cron-job.org</strong> (betrieben von Patrick Schlangen, Deutschland) regelmäßig eine Server-Adresse der App auf, die den Plan prüft und ggf. Push-Benachrichtigungen auslöst. Dabei werden <strong>keine Daten von Nutzerinnen und Nutzern</strong> an cron-job.org übermittelt.</p>
 
       <!-- 8 -->
@@ -171,8 +176,9 @@
       <p>Betroffene Lehrkräfte können der Verarbeitung nach Art. 21 DSGVO widersprechen; bitte wende dich dazu an die oben genannte E-Mail-Adresse.</p>
 
       <!-- 9 -->
-      <h2 id="kontakt">9. Kontakt per E-Mail</h2>
+      <h2 id="kontakt">9. Kontakt per E-Mail und Feedback aus der App</h2>
       <p>Wenn du mir eine E-Mail schreibst, verarbeite ich deine E-Mail-Adresse und den Inhalt deiner Nachricht, um deine Anfrage zu beantworten (Art. 6 Abs. 1 lit. f DSGVO; bei Anfragen zu deinen Rechten Art. 6 Abs. 1 lit. c DSGVO). Die Daten werden gelöscht, sobald die Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      <p>In der App gibt es unter Einstellungen → „Über die App“ den Punkt <strong>„Feedback senden oder Fehler melden“</strong>. Er öffnet das E-Mail-Programm deines Geräts mit einer vorbereiteten E-Mail an <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a>. Darin stehen – sichtbar und vor dem Absenden änderbar – deine gewählte Klasse, ob die App installiert ist, die App-Version und die Kennung deines Geräts bzw. Browsers (User-Agent). Diese Angaben helfen, Fehler nachzuvollziehen. Die App selbst verschickt nichts: Gesendet wird nur, wenn du in deinem E-Mail-Programm selbst auf „Senden“ tippst. Für die E-Mail gilt dann das oben Gesagte.</p>
 
       <!-- 10 -->
       <h2 id="nicht">10. Was nicht stattfindet</h2>
@@ -202,9 +208,9 @@
             <tr><td>Server-Logfiles (inkl. IP)</td><td>Vercel</td><td>Art. 6 Abs. 1 lit. f</td><td>automatisch nach kurzer Zeit</td></tr>
             <tr><td>Nutzungsstatistik</td><td>Vercel</td><td>Art. 6 Abs. 1 lit. f</td><td>Besucher-Hash nach 24 h; nur aggregierte Werte bleiben</td></tr>
             <tr><td>Auswahl, Einstellungen, Offline-Plan</td><td>nur dein Gerät</td><td>§ 25 Abs. 2 Nr. 2 TDDDG</td><td>„App zurücksetzen“ oder Browserdaten löschen</td></tr>
-            <tr><td>Push-Anmeldung und -Auswahl</td><td>Upstash</td><td>Art. 6 Abs. 1 lit. a</td><td>beim Ausschalten oder wenn ungültig</td></tr>
+            <tr><td>Push-Anmeldung, Auswahl und Benachrichtigungs-Einstellungen</td><td>Upstash</td><td>Art. 6 Abs. 1 lit. a</td><td>sofort beim Ausschalten oder „App zurücksetzen“; automatisch, wenn ungültig</td></tr>
             <tr><td>Einträge des Vertretungsplans</td><td>Vercel (Arbeitsspeicher, CDN), Upstash</td><td>Art. 6 Abs. 1 lit. f</td><td>max. 5 Min. bzw. bei jeder Prüfung (ca. alle 10 Min.) überschrieben; vergangene Tage entfernt</td></tr>
-            <tr><td>E-Mail-Anfragen</td><td>Postfach des Betreibers</td><td>Art. 6 Abs. 1 lit. f / c</td><td>nach Erledigung</td></tr>
+            <tr><td>E-Mail-Anfragen und Feedback</td><td>Postfach des Betreibers</td><td>Art. 6 Abs. 1 lit. f / c</td><td>nach Erledigung</td></tr>
           </tbody>
         </table>
       </div>
@@ -221,7 +227,7 @@
         <li><strong>Widerspruch</strong> gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f (Art. 21),</li>
         <li><strong>Widerruf</strong> einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3).</li>
       </ul>
-      <p>Wende dich dafür an die in <a href="#verantwortlicher">Abschnitt 1</a> genannte E-Mail-Adresse. Da die App ohne Konto auskommt, kann ich dich auf dem Server in der Regel nicht anhand deines Namens finden (vgl. Art. 11 DSGVO). Die meisten Rechte kannst du deshalb am einfachsten direkt in der App ausüben: Deine lokal gespeicherten Daten siehst und änderst du in den Einstellungen, „App zurücksetzen“ löscht sie, und das Ausschalten von Push löscht deine Push-Anmeldung auf dem Server.</p>
+      <p>Wende dich dafür an die in <a href="#verantwortlicher">Abschnitt 1</a> genannte E-Mail-Adresse. Da die App ohne Konto auskommt, kann ich dich auf dem Server in der Regel nicht anhand deines Namens finden (vgl. Art. 11 DSGVO). Die meisten Rechte kannst du deshalb am einfachsten direkt in der App ausüben: Deine lokal gespeicherten Daten siehst und änderst du in den Einstellungen, „App zurücksetzen“ löscht sie (und eine vorhandene Push-Anmeldung auf dem Server), und das Ausschalten von Push löscht deine Push-Anmeldung auf dem Server.</p>
 
       <!-- 14 -->
       <h2 id="beschwerde">14. Beschwerderecht bei der Aufsichtsbehörde</h2>
@@ -238,13 +244,14 @@
       <p>Die Bereitstellung von Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die technisch notwendigen Verbindungsdaten (Abschnitt 2) kann die App nicht ausgeliefert werden; ohne Push-Anmeldung kannst du die App weiterhin vollständig nutzen, erhältst aber keine Benachrichtigungen.</p>
       <p>Die Verbindung zur App und zu dieser Seite ist per HTTPS (TLS) verschlüsselt.</p>
       <p>Ich passe diese Datenschutzerklärung an, wenn sich die App oder die Rechtslage ändert. Es gilt die jeweils hier veröffentlichte Fassung.</p>
-      <p class="muted">Stand: 10. Oktober 2026</p>
+      <p class="muted">Stand: 15. Oktober 2026</p>
     </article>
   </main>
 
   <footer class="site-footer">
     <ul>
       <li><a href="/">Start</a></li>
+      <li><a href="/hilfe">Hilfe</a></li>
       <li><a href="/impressum">Impressum</a></li>
       <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
     </ul>
