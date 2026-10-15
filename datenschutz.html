@@ -97,7 +97,7 @@
       <ul>
         <li>Es werden <strong>keine Cookies</strong> gesetzt und <strong>keine Kennungen auf deinem Gerät gespeichert</strong>.</li>
         <li>Besucher werden nur über einen Hash-Wert (eine Art Prüfsumme) erkannt, der aus der Anfrage gebildet wird und sich täglich ändert. Die Zuordnung wird nach spätestens 24 Stunden verworfen. Ein Wiedererkennen über mehrere Tage oder über andere Websites hinweg findet nicht statt.</li>
-        <li>Gezählt werden Seitenaufrufe; die Startseite der App wird dabei getrennt danach gezählt, ob sie als installierte App oder im Browser geöffnet wurde.</li>
+        <li>Gezählt werden Seitenaufrufe. Die Startseite der App wird dabei getrennt danach gezählt, ob sie als installierte App oder im Browser geöffnet wurde: Vor dem Senden ersetzt die App die Adresse „/“ durch „/app“ bzw. „/browser“ und entfernt Zusatzangaben wie „?day=…“. Dafür wird nichts auf deinem Gerät gespeichert.</li>
         <li>Erfasst werden: aufgerufene Seite, Zeitpunkt, Referrer, Land/Region, Browser und Betriebssystem jeweils mit Version, Gerätetyp.</li>
         <li>Die Auswertung erfolgt ausschließlich zusammengefasst (aggregiert); Rückschlüsse auf einzelne Personen sind nicht vorgesehen.</li>
       </ul>
@@ -124,7 +124,8 @@
 
       <!-- 5 -->
       <h2 id="push">5. Push-Benachrichtigungen</h2>
-      <p>Die App kann dich über Änderungen im Vertretungsplan per Push-Benachrichtigung informieren. Das geschieht <strong>nur, wenn du die Funktion selbst einschaltest</strong> (in der App unter Einstellungen → „Benachrichtigungen“) und dein Browser bzw. Betriebssystem dir die Erlaubnis dafür abfragt.</p>
+      <p>Die App kann dich über Änderungen im Vertretungsplan per Push-Benachrichtigung informieren. Das geschieht <strong>nur, wenn du die Funktion selbst einschaltest</strong> und dein Browser bzw. Betriebssystem dir die Erlaubnis dafür abfragt.</p>
+      <p>Einschalten kannst du Benachrichtigungen an mehreren Stellen in der App: auf der Startseite (bei deiner Klasse), in der Einführung beim ersten Start oder unter Einstellungen → „Benachrichtigungen“. Ausschalten kannst du sie unter Einstellungen → „Benachrichtigungen“. Auch „App zurücksetzen“ (Einstellungen → „Über die App“) schaltet sie aus und löscht deine Anmeldung.</p>
 
       <h3 id="push-daten">5.1 Welche Daten gespeichert werden</h3>
       <p>Wenn du Push einschaltest, werden je Gerät folgende Daten auf einem Server gespeichert:</p>
@@ -150,7 +151,7 @@
 
       <h3 id="push-recht">5.3 Rechtsgrundlage, Widerruf und Löschung</h3>
       <p><strong>Rechtsgrundlage</strong> ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und, für das Anlegen der Push-Anmeldung auf deinem Gerät, § 25 Abs. 1 TDDDG.</p>
-      <p><strong>Widerruf:</strong> Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem du Push-Benachrichtigungen in der App ausschaltest oder die App über „App zurücksetzen“ zurücksetzt. Deine Anmeldung wird dann <strong>sofort vom Server gelöscht</strong>. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt unberührt. Entziehst du die Berechtigung nur in den Browser- oder Systemeinstellungen, wird die Anmeldung spätestens beim nächsten Zustellversuch als ungültig erkannt und gelöscht.</p>
+      <p><strong>Widerruf:</strong> Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem du Push-Benachrichtigungen in der App ausschaltest (Einstellungen → „Benachrichtigungen“) oder die App über „App zurücksetzen“ zurücksetzt. Deine Anmeldung wird dann <strong>sofort vom Server gelöscht</strong>. Die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung bleibt unberührt. Entziehst du die Berechtigung nur in den Browser- oder Systemeinstellungen, wird die Anmeldung spätestens beim nächsten Zustellversuch als ungültig erkannt und gelöscht.</p>
       <p><strong>Speicherdauer:</strong> Die Daten werden gespeichert, bis du Push ausschaltest, die App zurücksetzt oder der Push-Dienst die Anmeldung als ungültig meldet (z. B. nach Deinstallation der App oder Löschen der Browserdaten); ungültige Anmeldungen werden automatisch gelöscht.</p>
 
       <!-- 6 -->
