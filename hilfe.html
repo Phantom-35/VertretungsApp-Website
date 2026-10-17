@@ -4,85 +4,175 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hilfe – KAG Vertretungsplan</title>
-  <meta name="description" content="Hilfe zur Web-App „KAG Vertretungsplan“: Einstellungen, Benachrichtigungen, tägliche Überblicke und Ansicht am Computer.">
-  <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+  <meta name="description" content="Häufige Fragen zur Web-App „KAG Vertretungsplan“: installieren, Benachrichtigungen, Einstellungen, Ferien und Kontakt.">
+  <meta name="theme-color" content="#fbf8f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="32" height="32">KAG Vertretungsplan</a>
+    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26">KAG Vertretungsplan</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <ul>
-        <li><a href="/">Start</a></li>
         <li><a href="/hilfe" aria-current="page">Hilfe</a></li>
-        <li><a href="/impressum">Impressum</a></li>
         <li><a href="/datenschutz">Datenschutz</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/hilfe#kontakt">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="inhalt">
-    <article class="card">
+    <header class="page-head">
       <h1>Hilfe</h1>
-      <p class="muted">Stand: Oktober 2026</p>
+      <p class="lead">Kurze Antworten auf die häufigsten Fragen zur App. Wenn etwas fehlt, schreib mir – Kontakt steht <a href="#kontakt">ganz unten</a>.</p>
+      <p class="meta">Stand: Oktober 2026</p>
+    </header>
 
+    <div class="with-toc">
       <nav class="toc" aria-labelledby="toc-titel">
-        <h2 id="toc-titel">Inhalt</h2>
+        <h2 id="toc-titel">Auf dieser Seite</h2>
         <ol>
+          <li><a href="#was">Was ist die App?</a></li>
+          <li><a href="#installieren">Installieren</a></li>
+          <li><a href="#benachrichtigungen">Benachrichtigungen</a></li>
           <li><a href="#einstellungen">Einstellungen</a></li>
-          <li><a href="#ueberblicke">Tägliche Überblicke</a></li>
+          <li><a href="#hilfe-kontakt">Hilfe &amp; Kontakt in der App</a></li>
+          <li><a href="#ferien">Ferien und Feiertage</a></li>
           <li><a href="#computer">Am PC, Mac oder iPad</a></li>
+          <li><a href="#altes-geraet">Zu altes Gerät</a></li>
+          <li><a href="#aktuell">Sind die Angaben aktuell?</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ol>
       </nav>
 
-      <h2 id="einstellungen">1. Einstellungen</h2>
-      <p>Die Einstellungen öffnest du über das <strong>Zahnrad</strong>. Oben siehst du <strong>„Meine Klasse“</strong> – in der Oberstufe zusätzlich <strong>„Meine Lehrkräfte“</strong>. Darunter findest du diese Bereiche:</p>
-      <dl class="facts">
-        <dt>Benachrichtigungen</dt>
-        <dd>Benachrichtigungen ein- und ausschalten, eine Testnachricht schicken, auswählen, worüber du informiert wirst, und die <a href="#ueberblicke">täglichen Überblicke</a> einstellen.</dd>
-        <dt>Anzeige</dt>
-        <dd>Hell oder Dunkel, Textgröße, ab wann schon der nächste Schultag gezeigt wird und ob neue Einträge mit „Neu“ markiert werden.</dd>
-        <dt>Als App installieren</dt>
-        <dd>Nur sichtbar, wenn du die Seite im Browser geöffnet hast: zeigt, wie du den Vertretungsplan als App auf deinem Gerät installierst.</dd>
-        <dt>App weitergeben (QR-Code)</dt>
-        <dd>Zeigt einen QR-Code, mit dem andere die App schnell öffnen können. Mit dem Knopf „Aushang drucken“ lässt sich die Seite auch als Aushang ausdrucken.</dd>
-        <dt>Über die App</dt>
-        <dd>Einführung noch einmal ansehen, Feedback senden oder Fehler melden, den Original-Plan der Schule öffnen, Impressum und Datenschutz – und „App zurücksetzen“, das alle gespeicherten Daten löscht.</dd>
-      </dl>
-      <p>Ganz unten steht die <strong>Versionsnummer</strong> (z. B. „Version 1.1.1“). Wenn du ein Problem meldest, gib sie bitte mit an.</p>
+      <div class="prose">
+        <section aria-labelledby="was">
+          <h2 id="was">Was ist die App?</h2>
+          <p>Der KAG Vertretungsplan zeigt dir den Vertretungsplan des Konrad-Adenauer-Gymnasiums Meckenheim nur für deine Klasse. In der Oberstufe wählst du deine Kurse über die Kürzel deiner Lehrkräfte aus.</p>
+          <ul>
+            <li>Der zuletzt geladene Plan ist auch ohne Internet verfügbar.</li>
+            <li>Die App ist kostenlos und braucht kein Konto.</li>
+            <li>Es gibt sie nicht im App Store oder bei Google Play. Du öffnest sie im Browser und legst sie dir von dort auf den Home-Bildschirm – <a href="#installieren">so geht’s</a>.</li>
+          </ul>
+          <p>Die App ist ein privates Projekt und kein Angebot der Schule.</p>
+        </section>
 
-      <h2 id="ueberblicke">2. Tägliche Überblicke</h2>
-      <p>Wenn Benachrichtigungen eingeschaltet sind, kannst du dir jeden Tag einen Überblick schicken lassen:</p>
-      <ul>
-        <li><strong>Abends</strong> ein Überblick für morgen – um 17, 18, <strong>19</strong> oder 20 Uhr.</li>
-        <li><strong>Morgens</strong> ein Überblick für heute – um 6:00, <strong>6:30</strong> oder 7:00 Uhr.</li>
-      </ul>
-      <p class="muted">Fett gedruckt ist jeweils die Voreinstellung.</p>
-      <p>Die Uhrzeit kannst du auswählen, sobald du den jeweiligen Überblick eingeschaltet hast.</p>
-      <p>Kommt der Plan für morgen erst spät, bekommst du den Abend-Überblick sofort danach (bis 21 Uhr).</p>
-      <p>Nachts zwischen 21 und 6 Uhr kommen keine Benachrichtigungen. Was in der Nacht dazukommt, bekommst du morgens gesammelt.</p>
+        <section aria-labelledby="installieren">
+          <h2 id="installieren">Installieren</h2>
+          <p>Öffne zuerst <a href="https://vertretung-kag.vercel.app" rel="noopener">vertretung-kag.vercel.app</a> im Browser. Dann:</p>
+          <dl class="terms">
+            <dt>iPhone und iPad</dt>
+            <dd>In Safari auf „Teilen“ tippen, dann „Zum Home-Bildschirm“.</dd>
+            <dt>Android</dt>
+            <dd>In Chrome das Menü öffnen (drei Punkte), dann „App installieren“.</dd>
+            <dt>PC und Mac</dt>
+            <dd>Auf das Installieren-Symbol rechts in der Adressleiste klicken.</dd>
+          </dl>
+          <p>Die App zeigt dir die Schritte für dein Gerät auch selbst: Einstellungen → „Als App installieren“.</p>
+        </section>
 
-      <h2 id="computer">3. Am PC, Mac oder iPad</h2>
-      <p>Auf großen Bildschirmen – am PC, am Mac oder auf dem iPad im Querformat – hat die App eine eigene Ansicht: Alle Tage stehen nebeneinander. Auf dem Handy bleibt alles wie gewohnt.</p>
+        <section aria-labelledby="benachrichtigungen">
+          <h2 id="benachrichtigungen">Benachrichtigungen</h2>
+          <p>Die App kann dir Bescheid geben, wenn sich der Plan für deine Klasse ändert. Einschalten kannst du das auf der Startseite der App (bei deiner Klasse), in der Einführung beim ersten Start oder unter Einstellungen → „Benachrichtigungen“.</p>
+          <p class="note"><strong>iPhone und iPad:</strong> Benachrichtigungen gibt es dort nur in der installierten App, nicht in Safari.</p>
 
-      <div class="notice" role="note">
-        <p>Noch Fragen oder einen Fehler gefunden? Schreib mir über <strong>Einstellungen → „Über die App“ → „Feedback senden oder Fehler melden“</strong> oder direkt an <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a>.</p>
+          <h3 id="arten">Worüber du informiert wirst</h3>
+          <p>Du wählst selbst, welche Änderungen gemeldet werden: Ausfälle &amp; EVA, Vertretungen &amp; Betreuung, Raumänderungen &amp; Verlegungen sowie Klausuren &amp; Veranstaltungen.</p>
+
+          <h3 id="ueberblicke">Tägliche Überblicke</h3>
+          <ul>
+            <li><strong>Abends</strong> ein Überblick für morgen – um 17, 18, <strong>19</strong> oder 20 Uhr.</li>
+            <li><strong>Morgens</strong> ein Überblick für heute – um 6:00, <strong>6:30</strong> oder 7:00 Uhr.</li>
+          </ul>
+          <p class="muted small">Fett gedruckt ist jeweils die Voreinstellung. Die Uhrzeit wählst du, sobald der Überblick eingeschaltet ist.</p>
+          <p>Kommt der Plan für morgen erst spät, bekommst du den Abend-Überblick sofort danach (bis 21 Uhr).</p>
+          <p>Nachts zwischen 21 und 6 Uhr kommen keine Benachrichtigungen. Was in der Nacht dazukommt, bekommst du morgens gesammelt.</p>
+
+          <h3 id="test">Ausprobieren</h3>
+          <p>Mit „Testnachricht senden“ in den Einstellungen siehst du sofort, ob Benachrichtigungen bei dir ankommen.</p>
+
+          <h3 id="kommt-nichts">Es kommt nichts an?</h3>
+          <ul>
+            <li>Sind Mitteilungen für die App (bzw. den Browser) in den Systemeinstellungen deines Geräts erlaubt?</li>
+            <li>Ist ein Fokus oder „Nicht stören“ eingeschaltet?</li>
+            <li>Hilft beides nicht, melde es bitte über <a href="#hilfe-kontakt">„Hilfe &amp; Kontakt“</a>.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="einstellungen">
+          <h2 id="einstellungen">Einstellungen</h2>
+          <p>Die Einstellungen öffnest du über das <strong>Zahnrad</strong>. Oben steht „Meine Klasse“, in der Oberstufe zusätzlich „Meine Lehrkräfte“. Darunter:</p>
+          <dl class="terms">
+            <dt>Benachrichtigungen</dt>
+            <dd>Ein- und ausschalten, Testnachricht, worüber du informiert wirst, tägliche Überblicke.</dd>
+            <dt>Anzeige</dt>
+            <dd>Hell oder Dunkel, Textgröße, ab wann schon der nächste Schultag gezeigt wird, „Neu“-Markierungen.</dd>
+            <dt>Als App installieren</dt>
+            <dd>Nur sichtbar, wenn du die App im Browser geöffnet hast.</dd>
+            <dt>App weitergeben (QR-Code)</dt>
+            <dd>Ein QR-Code, mit dem andere die App schnell öffnen können. Mit „Aushang drucken“ lässt er sich auch als Aushang ausdrucken.</dd>
+            <dt>Hilfe &amp; Kontakt</dt>
+            <dd>Fehler melden, Fragen stellen, Ideen schicken – <a href="#hilfe-kontakt">mehr dazu</a>.</dd>
+            <dt>Über die App</dt>
+            <dd>Einführung noch einmal ansehen, Original-Plan der Schule, Impressum, Datenschutz und „App zurücksetzen“, das alle gespeicherten Daten löscht.</dd>
+          </dl>
+          <p>Ganz unten steht die <strong>Versionsnummer</strong>. Wenn du ein Problem meldest, hilft sie mir sehr.</p>
+        </section>
+
+        <section aria-labelledby="hilfe-kontakt">
+          <h2 id="hilfe-kontakt">Hilfe &amp; Kontakt in der App</h2>
+          <p>Unter Einstellungen → „Hilfe &amp; Kontakt“ kannst du mir direkt aus der App schreiben. Du wählst zuerst, worum es geht: <strong>Fehler melden</strong>, <strong>Frage</strong>, <strong>Idee oder Wunsch</strong> oder <strong>Sonstiges</strong>. Bei einem Fehler kreuzt du an, was nicht stimmt.</p>
+          <p>Damit ich Fehler nachvollziehen kann, hängt die App Angaben zu deinem Gerät an, zum Beispiel Gerät, Browser und App-Version. Du siehst alle Angaben vor dem Absenden und kannst sie abwählen.</p>
+          <p>Du kannst die Nachricht direkt absenden oder per E-Mail aus deinem eigenen E-Mail-Programm. <strong>Eine Antwort bekommst du nur, wenn du eine E-Mail-Adresse angibst.</strong></p>
+          <p class="muted small">Was dabei mit deinen Daten passiert, steht in der <a href="/datenschutz#hilfe-kontakt">Datenschutzerklärung</a>.</p>
+        </section>
+
+        <section aria-labelledby="ferien">
+          <h2 id="ferien">Ferien und Feiertage</h2>
+          <p>In den Schulferien in NRW zeigt die App eine Ferienkarte – auch dann, wenn der Plan für die Zeit nach den Ferien schon online ist. Dann findest du auf der Karte die Knöpfe „Plan für … ansehen“ und „Letzten Plan ansehen“.</p>
+          <ul>
+            <li>Am ersten freien Tag erscheint die Ferienkarte erst ab 10 Uhr.</li>
+            <li>Am letzten freien Tag zeigt die App ab der eingestellten Uhrzeit (Standard: 16 Uhr) direkt den Plan für den ersten Schultag.</li>
+          </ul>
+          <p>Bewegliche Ferientage der Schule kennt die App nicht.</p>
+        </section>
+
+        <section aria-labelledby="computer">
+          <h2 id="computer">Am PC, Mac oder iPad</h2>
+          <p>Auf großen Bildschirmen – am PC, am Mac oder auf dem iPad im Querformat – hat die App eine eigene Ansicht mit allen Tagen nebeneinander. Auf dem Handy bleibt alles wie gewohnt.</p>
+        </section>
+
+        <section aria-labelledby="altes-geraet">
+          <h2 id="altes-geraet">Zu altes Gerät</h2>
+          <p>Auf Geräten mit einer älteren Version als iOS 16.4 und in sehr alten Browsern funktioniert die App nicht richtig. Sie zeigt dann stattdessen einen Hinweis mit einem Link zum Original-Plan der Schule.</p>
+        </section>
+
+        <section aria-labelledby="aktuell">
+          <h2 id="aktuell">Sind die Angaben aktuell?</h2>
+          <p>Die App prüft den Plan der Schule regelmäßig. Im Zweifel gilt aber immer der Aushang bzw. der Original-Plan der Schule.</p>
+        </section>
+
+        <section aria-labelledby="kontakt">
+          <h2 id="kontakt">Kontakt</h2>
+          <p>Schreib eine E-Mail an <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a> oder nutze in der App <a href="#hilfe-kontakt">„Hilfe &amp; Kontakt“</a>.</p>
+        </section>
       </div>
-    </article>
+    </div>
   </main>
 
   <footer class="site-footer">
+    <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
     <ul>
-      <li><a href="/">Start</a></li>
+      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
       <li><a href="/impressum">Impressum</a></li>
       <li><a href="/datenschutz">Datenschutz</a></li>
-      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
     </ul>
-    <p>Privates, nicht kommerzielles Projekt. Kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim.</p>
   </footer>
 </body>
 </html>

@@ -3,77 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KAG Vertretungsplan – Informationen</title>
-  <meta name="description" content="Informationen, Hilfe, Impressum und Datenschutzerklärung zur Web-App „KAG Vertretungsplan“ für das Konrad-Adenauer-Gymnasium Meckenheim.">
-  <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+  <title>KAG Vertretungsplan – Hilfe und Informationen</title>
+  <meta name="description" content="Hilfe, häufige Fragen, Impressum und Datenschutzerklärung zur Web-App „KAG Vertretungsplan“ für das Konrad-Adenauer-Gymnasium Meckenheim.">
+  <meta name="theme-color" content="#fbf8f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="32" height="32">KAG Vertretungsplan</a>
+    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26">KAG Vertretungsplan</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <ul>
-        <li><a href="/" aria-current="page">Start</a></li>
         <li><a href="/hilfe">Hilfe</a></li>
-        <li><a href="/impressum">Impressum</a></li>
         <li><a href="/datenschutz">Datenschutz</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/hilfe#kontakt">Kontakt</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="inhalt">
-    <section class="card" aria-labelledby="titel">
-      <h1 id="titel">KAG Vertretungsplan</h1>
-      <p class="lead">Der Vertretungsplan des Konrad-Adenauer-Gymnasiums Meckenheim – übersichtlich, gefiltert nach deiner Klasse und deinen Kursen, auch offline und auf Wunsch mit Push-Benachrichtigungen.</p>
-      <ul>
-        <li>Kostenlos, ohne Werbung, ohne Konto und ohne Cookies.</li>
-        <li>Deine Auswahl (Klasse, Kurse, Einstellungen) bleibt auf deinem Gerät.</li>
-        <li>Als App installierbar (Progressive Web App) – auf dem Smartphone und am Computer.</li>
-      </ul>
+    <div class="home-intro">
+      <h1>Der Vertretungsplan für deine Klasse</h1>
+      <p class="lead">Die App zeigt dir den Vertretungsplan des Konrad-Adenauer-Gymnasiums Meckenheim nur für deine Klasse oder, in der Oberstufe, für deine Kurse – auch offline, kostenlos und ohne Konto. Auf Wunsch meldet sie Änderungen per Benachrichtigung.</p>
       <div class="actions">
-        <a class="button" href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a>
+        <a class="button" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+        <a href="/hilfe#installieren">So legst du sie auf den Home-Bildschirm</a>
       </div>
-    </section>
-
-    <section class="card" aria-labelledby="k-hilfe">
-      <h2 id="k-hilfe">Hilfe &amp; Kontakt</h2>
-      <p>Wie Einstellungen, Benachrichtigungen und die täglichen Überblicke funktionieren, erklärt die <a href="/hilfe">Hilfe</a>.</p>
-      <p>Fragen, Ideen oder einen Fehler gefunden? Schreib an <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a> – oder in der App über Einstellungen → „Über die App“ → „Feedback senden oder Fehler melden“.</p>
-      <div class="actions">
-        <a class="button" href="/hilfe">Hilfe öffnen</a>
-      </div>
-    </section>
-
-    <div class="notice" role="note">
-      <p><strong>Kein offizielles Angebot der Schule.</strong> Der KAG Vertretungsplan ist ein privates, nicht kommerzielles Projekt. Die Angaben stammen aus dem öffentlich zugänglichen Vertretungsplan der Schule und werden ohne Gewähr für Richtigkeit, Vollständigkeit und Aktualität angezeigt. Maßgeblich ist immer der Plan der Schule.</p>
     </div>
 
-    <div class="link-cards">
-      <section class="card" aria-labelledby="k-impressum">
-        <h2 id="k-impressum">Impressum</h2>
-        <p class="muted">Wer die App betreibt und wie du Kontakt aufnimmst.</p>
-        <p><a href="/impressum">Impressum öffnen</a></p>
+    <div class="home-grid">
+      <section aria-labelledby="fragen">
+        <h2 id="fragen">Häufige Fragen</h2>
+        <ol class="topic-list">
+          <li><a href="/hilfe#was"><span class="topic-title">Was ist die App?</span><span class="topic-text">Wofür sie gedacht ist und warum es sie nicht im App Store gibt.</span></a></li>
+          <li><a href="/hilfe#installieren"><span class="topic-title">Installieren</span><span class="topic-text">iPhone und iPad, Android, PC und Mac.</span></a></li>
+          <li><a href="/hilfe#benachrichtigungen"><span class="topic-title">Benachrichtigungen</span><span class="topic-text">Arten, tägliche Überblicke, Nachtruhe – und was tun, wenn nichts ankommt.</span></a></li>
+          <li><a href="/hilfe#einstellungen"><span class="topic-title">Einstellungen</span><span class="topic-text">Was sich hinter dem Zahnrad verbirgt.</span></a></li>
+          <li><a href="/hilfe#hilfe-kontakt"><span class="topic-title">Hilfe &amp; Kontakt in der App</span><span class="topic-text">Fehler melden, Fragen stellen, Ideen schicken.</span></a></li>
+          <li><a href="/hilfe#ferien"><span class="topic-title">Ferien und Feiertage</span><span class="topic-text">Was die App in den Schulferien zeigt.</span></a></li>
+          <li><a href="/hilfe#computer"><span class="topic-title">Am PC, Mac oder iPad</span><span class="topic-text">Alle Tage nebeneinander auf großen Bildschirmen.</span></a></li>
+          <li><a href="/hilfe#altes-geraet"><span class="topic-title">Zu altes Gerät</span><span class="topic-text">Wenn die App einen Hinweis statt des Plans zeigt.</span></a></li>
+          <li><a href="/hilfe#aktuell"><span class="topic-title">Sind die Angaben aktuell?</span><span class="topic-text">Wie oft die App den Plan prüft und was im Zweifel gilt.</span></a></li>
+        </ol>
+        <p class="small"><a href="/hilfe">Alle Antworten auf einer Seite</a></p>
       </section>
-      <section class="card" aria-labelledby="k-datenschutz">
-        <h2 id="k-datenschutz">Datenschutz</h2>
-        <p class="muted">Welche Daten die App verarbeitet – und welche nicht.</p>
-        <p><a href="/datenschutz">Datenschutzerklärung öffnen</a></p>
-      </section>
+
+      <aside aria-label="Kontakt und Hinweise">
+        <section class="aside-block" aria-labelledby="kontakt">
+          <h2 id="kontakt">Kontakt</h2>
+          <p>Fehler gefunden, eine Frage oder eine Idee? In der App geht das am schnellsten über Einstellungen → „Hilfe &amp; Kontakt“. Oder schreib eine E-Mail an <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a>.</p>
+        </section>
+        <section class="aside-block" aria-labelledby="hinweis">
+          <h2 id="hinweis">Kein Angebot der Schule</h2>
+          <p class="muted">Der KAG Vertretungsplan ist ein privates, nicht kommerzielles Projekt. Die Angaben stammen aus dem öffentlich zugänglichen Vertretungsplan der Schule und werden ohne Gewähr angezeigt. Maßgeblich ist immer der Plan der Schule.</p>
+        </section>
+      </aside>
     </div>
   </main>
 
   <footer class="site-footer">
+    <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
     <ul>
-      <li><a href="/hilfe">Hilfe</a></li>
+      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
       <li><a href="/impressum">Impressum</a></li>
       <li><a href="/datenschutz">Datenschutz</a></li>
-      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
     </ul>
-    <p>Privates, nicht kommerzielles Projekt. Kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim.</p>
   </footer>
 </body>
 </html>

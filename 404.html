@@ -5,16 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Seite nicht gefunden – KAG Vertretungsplan</title>
   <meta name="robots" content="noindex">
+  <meta name="description" content="Diese Seite gibt es nicht.">
+  <meta name="theme-color" content="#fbf8f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26">KAG Vertretungsplan</a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="/hilfe">Hilfe</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/hilfe#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main id="inhalt">
-    <section class="card">
+    <header class="page-head">
       <h1>Seite nicht gefunden</h1>
-      <p class="muted">Diese Adresse gibt es leider nicht.</p>
-      <p><a href="/">Zur Startseite</a> · <a href="/hilfe">Hilfe</a> · <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a></p>
-    </section>
+      <p class="lead">Diese Adresse gibt es leider nicht.</p>
+    </header>
+    <div class="actions">
+      <a class="button" href="/">Zur Startseite</a>
+      <a href="/hilfe">Zur Hilfe</a>
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
+    <ul>
+      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
+      <li><a href="/impressum">Impressum</a></li>
+      <li><a href="/datenschutz">Datenschutz</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
