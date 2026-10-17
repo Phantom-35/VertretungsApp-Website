@@ -67,7 +67,7 @@
             <li>Beim Aufruf fallen technisch notwendige Server-Logdaten (u. a. IP-Adresse) beim Hoster Vercel an.</li>
             <li>Die App erstellt eine anonyme Nutzungsstatistik ohne Cookies.</li>
             <li>Nur wenn du Push-Benachrichtigungen einschaltest, werden deine Push-Adresse und deine Auswahl auf einem Server gespeichert. Schaltest du Push aus oder setzt du die App zurück, werden diese Daten sofort gelöscht.</li>
-            <li>Schreibst du mir über „Hilfe &amp; Kontakt“, wird deine Nachricht an mein Handy weitergeleitet; auf dem Server der App wird sie nicht gespeichert.</li>
+            <li>Schreibst du mir über „Hilfe &amp; Kontakt“, wird deine Nachricht über den Dienst ntfy.sh (USA) an mein Handy weitergeleitet; auf dem Server der App wird sie nicht gespeichert. Das ist freiwillig – du kannst mir auch eine normale E-Mail schreiben.</li>
           </ul>
         </section>
 
@@ -183,13 +183,16 @@
 
           <h3 id="hilfe-kontakt-weg">6.2 Weg der Nachricht</h3>
           <p>Wenn du direkt absendest, geht die Nachricht über den Server der App an den Benachrichtigungsdienst <strong>ntfy.sh</strong> und von dort auf mein Handy. Auf dem Server der App wird die Nachricht <strong>nicht gespeichert</strong>. Zum Schutz vor Missbrauch (z. B. massenhaftes Absenden) hält der Server deine IP-Adresse höchstens 10 Minuten im Arbeitsspeicher.</p>
-          <p>Nach eigenen Angaben speichert ntfy.sh Nachrichten vorübergehend zwischen (standardmäßig 12 Stunden) und löscht sie danach. Weitere Informationen: <a href="https://docs.ntfy.sh/privacy/" rel="noopener">Datenschutzerklärung von ntfy.sh</a>.</p>
+          <p><strong>Über ntfy.sh:</strong> ntfy.sh ist ein kostenloser Dienst des Entwicklers Philipp C. Heckel; eine Firma oder ein Sitzland nennt ntfy.sh nicht. Nach eigenen Angaben läuft der Dienst bei <strong>DigitalOcean</strong>, einem Anbieter aus den USA; die Region ist nicht angegeben. Nachrichten werden dort standardmäßig 12 Stunden zwischengespeichert und danach gelöscht. Die Server-Logs von ntfy.sh enthalten laut ntfy Themennamen und IP-Adressen (für Fehlersuche und zum Schutz vor Missbrauch).</p>
+          <p><strong>Zustellung auf mein Handy:</strong> Ich nutze die ntfy-App für das iPhone aus dem App Store. Nachrichten an diese App laufen laut ntfy.sh über <strong>Google Firebase Cloud Messaging</strong> (Google LLC); dabei können Inhalt und Metadaten der Nachricht über die Infrastruktur von Google übertragen werden.</p>
+          <p>Mit ntfy.sh besteht <strong>kein Vertrag zur Auftragsverarbeitung</strong> – der Dienst ist kostenlos, ohne Konto und bietet keinen solchen Vertrag an. Eine Übermittlung in die USA kann auf diesem Weg nicht ausgeschlossen werden (siehe <a href="#drittland">Abschnitt 12</a>). Weitere Informationen: <a href="https://docs.ntfy.sh/privacy/" rel="noopener">Datenschutzerklärung von ntfy.sh</a>.</p>
           <p>Alternativ kannst du dieselbe Nachricht <strong>per E-Mail</strong> schicken: Dann öffnet sich dein eigenes E-Mail-Programm mit einer vorbereiteten E-Mail an <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a>. Gesendet wird nur, wenn du dort selbst auf „Senden“ tippst. Natürlich kannst du mir auch einfach so eine E-Mail schreiben (siehe <a href="#kontakt">Abschnitt 10</a>).</p>
+          <p class="note"><strong>Das ist freiwillig.</strong> Wenn du die technischen Angaben nicht mitschicken möchtest, wähle sie vor dem Absenden ab. Wenn du ntfy.sh ganz vermeiden möchtest, nutze die E-Mail-Variante oder schreib mir eine normale E-Mail.</p>
 
           <h3 id="hilfe-kontakt-recht">6.3 Zweck, Rechtsgrundlage und Speicherdauer</h3>
           <p><strong>Zweck:</strong> deine Anfrage zu beantworten und gemeldete Fehler nachzuvollziehen und zu beheben.<br>
-          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt darin, Anfragen zu bearbeiten und die App zu verbessern. Die technischen Angaben kannst du vor dem Absenden abwählen.<br>
-          <strong>Speicherdauer:</strong> Ich lösche Nachrichten, sobald die Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Die IP-Adresse auf dem Server der App wird nach höchstens 10 Minuten verworfen.</p>
+          <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt darin, Anfragen zu bearbeiten und Fehler zu finden. Alle Angaben sind freiwillig; die technischen Angaben kannst du vor dem Absenden abwählen.<br>
+          <strong>Speicherdauer:</strong> Ich lösche die Nachricht, sobald die Anfrage erledigt ist, spätestens nach 6 Monaten. Bei ntfy.sh wird sie laut ntfy höchstens 12 Stunden zwischengespeichert. Die IP-Adresse auf dem Server der App wird nach höchstens 10 Minuten verworfen.</p>
         </section>
 
         <section aria-labelledby="kinder">
@@ -236,8 +239,9 @@
 
         <section aria-labelledby="drittland">
           <h2 id="drittland"><span class="section-no">12</span> Empfänger und Übermittlung in Drittländer</h2>
-          <p>Empfänger personenbezogener Daten sind die oben genannten Dienstleister (Vercel, Upstash) als Auftragsverarbeiter, bei Push-Benachrichtigungen der Push-Dienst deines Browsers bzw. Betriebssystems und, wenn du „Hilfe &amp; Kontakt“ nutzt, der Benachrichtigungsdienst ntfy.sh (siehe <a href="#hilfe-kontakt">Abschnitt 6</a>).</p>
+          <p>Empfänger personenbezogener Daten sind die oben genannten Dienstleister (Vercel, Upstash) als Auftragsverarbeiter, bei Push-Benachrichtigungen der Push-Dienst deines Browsers bzw. Betriebssystems und, wenn du „Hilfe &amp; Kontakt“ direkt absendest, der Benachrichtigungsdienst ntfy.sh sowie für die Zustellung auf mein Handy Google Firebase Cloud Messaging (siehe <a href="#hilfe-kontakt">Abschnitt 6</a>).</p>
           <p>Vercel Inc. und Upstash, Inc. haben ihren Sitz in den USA. Die Serverfunktionen und die Datenbank laufen zwar in Frankfurt am Main, ein Zugriff aus den USA (z. B. durch Wartung oder das weltweite Servernetz von Vercel) ist aber nicht ausgeschlossen. Beide Unternehmen sind nach eigenen Angaben unter dem <strong>EU-US Data Privacy Framework</strong> zertifiziert; für die USA besteht insoweit ein Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO). Ergänzend werden die Standardvertragsklauseln der EU-Kommission (Art. 46 Abs. 2 lit. c DSGVO) als Bestandteil der Auftragsverarbeitungsverträge verwendet. Den aktuellen Zertifizierungsstatus kannst du unter <a href="https://www.dataprivacyframework.gov/list" rel="noopener">dataprivacyframework.gov</a> prüfen.</p>
+          <p><strong>„Hilfe &amp; Kontakt“:</strong> ntfy.sh wird nach eigenen Angaben bei DigitalOcean (USA) betrieben, und die Zustellung an mein iPhone läuft über Google Firebase Cloud Messaging (Google LLC, USA). Eine Übermittlung deiner Nachricht in die USA kann deshalb nicht ausgeschlossen werden. Für diesen Weg besteht kein Vertrag zur Auftragsverarbeitung. Die Nutzung ist freiwillig: Du kannst die Geräte-Angaben abwählen oder mir stattdessen eine normale E-Mail schreiben.</p>
         </section>
 
         <section aria-labelledby="speicherdauer">
@@ -253,7 +257,7 @@
                 <tr><td>Nutzungsstatistik</td><td data-label="Wo">Vercel</td><td data-label="Rechtsgrundlage">Art. 6 Abs. 1 lit. f</td><td data-label="Löschung">Besucher-Hash nach 24 h; nur aggregierte Werte bleiben</td></tr>
                 <tr><td>Auswahl, Einstellungen, Offline-Plan</td><td data-label="Wo">nur dein Gerät</td><td data-label="Rechtsgrundlage">§ 25 Abs. 2 Nr. 2 TDDDG</td><td data-label="Löschung">„App zurücksetzen“ oder Browserdaten löschen</td></tr>
                 <tr><td>Push-Anmeldung, Auswahl und Benachrichtigungs-Einstellungen</td><td data-label="Wo">Upstash</td><td data-label="Rechtsgrundlage">Art. 6 Abs. 1 lit. a</td><td data-label="Löschung">sofort beim Ausschalten oder „App zurücksetzen“; automatisch, wenn ungültig</td></tr>
-                <tr><td>Nachrichten über „Hilfe &amp; Kontakt“</td><td data-label="Wo">ntfy.sh, Handy des Betreibers</td><td data-label="Rechtsgrundlage">Art. 6 Abs. 1 lit. f</td><td data-label="Löschung">bei ntfy.sh nach etwa 12 h; beim Betreiber nach Erledigung</td></tr>
+                <tr><td>Nachrichten über „Hilfe &amp; Kontakt“</td><td data-label="Wo">ntfy.sh (DigitalOcean, USA), Google Firebase, Handy des Betreibers</td><td data-label="Rechtsgrundlage">Art. 6 Abs. 1 lit. f</td><td data-label="Löschung">bei ntfy.sh höchstens 12 h; beim Betreiber nach Erledigung, spätestens nach 6 Monaten</td></tr>
                 <tr><td>IP-Adresse bei „Hilfe &amp; Kontakt“</td><td data-label="Wo">Vercel (Arbeitsspeicher)</td><td data-label="Rechtsgrundlage">Art. 6 Abs. 1 lit. f</td><td data-label="Löschung">nach höchstens 10 Min.</td></tr>
                 <tr><td>Einträge des Vertretungsplans</td><td data-label="Wo">Vercel (Arbeitsspeicher, CDN), Upstash</td><td data-label="Rechtsgrundlage">Art. 6 Abs. 1 lit. f</td><td data-label="Löschung">max. 5 Min. bzw. bei jeder Prüfung (ca. alle 10 Min.) überschrieben; vergangene Tage entfernt</td></tr>
                 <tr><td>E-Mail-Anfragen</td><td data-label="Wo">Postfach des Betreibers</td><td data-label="Rechtsgrundlage">Art. 6 Abs. 1 lit. f / c</td><td data-label="Löschung">nach Erledigung</td></tr>
