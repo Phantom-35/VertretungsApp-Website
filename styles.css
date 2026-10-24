@@ -986,6 +986,40 @@ code {
   }
 }
 
+/* Dasselbe für Browser ohne CSS-Scroll-Animationen: motion.js setzt --p (0 bis 1) */
+@media (prefers-reduced-motion: no-preference) {
+  .js-motion .hero-stage .phone--front {
+    transform:
+      translateX(calc(-28% - 2% * var(--p, 0)))
+      translateY(calc(-1rem * var(--p, 0)))
+      rotateY(calc(18deg - 14deg * var(--p, 0)))
+      rotateX(calc(4deg - 4deg * var(--p, 0)))
+      rotateZ(calc(-3deg + 2deg * var(--p, 0)));
+  }
+
+  .js-motion .hero-stage .phone--back {
+    transform:
+      translateX(calc(-2% + 6% * var(--p, 0)))
+      translateY(calc(-1.5rem - 1.5rem * var(--p, 0)))
+      rotateY(calc(-24deg + 16deg * var(--p, 0)))
+      rotateX(calc(6deg - 4deg * var(--p, 0)))
+      rotateZ(calc(4deg - 2deg * var(--p, 0)));
+  }
+
+  .js-motion .step-media .phone {
+    transform:
+      translateY(calc(3rem * (1 - var(--p, 1))))
+      rotateY(calc(var(--ry-end, -8deg) * (3 - 2 * var(--p, 1))))
+      rotateX(calc(14deg - 11deg * var(--p, 1)));
+    will-change: transform;
+  }
+
+  .js-motion .band .browser {
+    transform: rotateX(calc(38deg * (1 - var(--p, 1)))) scale(calc(0.92 + 0.08 * var(--p, 1)));
+    will-change: transform;
+  }
+}
+
 @keyframes hero-front {
   to {
     transform: translateX(-30%) translateY(-1rem) rotateY(4deg) rotateX(0deg) rotateZ(-1deg);
