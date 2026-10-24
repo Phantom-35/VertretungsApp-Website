@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – KAG Vertretungsplan</title>
+  <meta name="description" content="Kontakt zur Web-App „KAG Vertretungsplan“: am schnellsten über „Hilfe & Kontakt“ in der App oder über das Kontaktformular.">
+  <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="/contact.js" defer></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/nav.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="24" height="24"><span class="brand-name">KAG Vertretungsplan</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="hauptnavigation" aria-label="Menü öffnen"><span class="menu-icon" aria-hidden="true"></span></button>
+      <nav class="site-nav" id="hauptnavigation" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="/hilfe">Hilfe</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/kontakt" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="button header-cta" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+    </div>
+  </header>
+
+  <main id="inhalt" class="page">
+    <header class="page-head">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Schreib mir.</h1>
+      <p class="lead">Fehler gefunden, eine Frage oder eine Idee? Am schnellsten geht es direkt in der App – oder hier über das Formular.</p>
+    </header>
+
+    <section class="contact-app" aria-labelledby="in-der-app">
+      <div class="contact-app-text">
+        <span class="badge">Empfohlen</span>
+        <h2 id="in-der-app">Direkt in der App.</h2>
+        <p>In der App kannst du deine Nachricht gleich mit den passenden Angaben zu deinem Gerät schicken. So kann ich Fehler viel schneller finden. Du siehst alle Angaben vor dem Absenden und kannst sie abwählen.</p>
+        <ol class="path" aria-label="So kommst du hin">
+          <li>App öffnen</li>
+          <li>Zahnrad (Einstellungen)</li>
+          <li>„Hilfe &amp; Kontakt“</li>
+        </ol>
+        <div class="actions">
+          <a class="button" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+          <a class="link-arrow" href="/hilfe#hilfe-kontakt">Mehr dazu in der Hilfe</a>
+        </div>
+      </div>
+      <div class="contact-app-media">
+        <div class="phone">
+          <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/kontakt-dark-390.avif 390w, /img/app/kontakt-dark-780.avif 780w" sizes="(min-width: 56rem) 17rem, 60vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/kontakt-dark-390.webp 390w, /img/app/kontakt-dark-780.webp 780w" sizes="(min-width: 56rem) 17rem, 60vw">
+              <source type="image/avif" srcset="/img/app/kontakt-light-390.avif 390w, /img/app/kontakt-light-780.avif 780w" sizes="(min-width: 56rem) 17rem, 60vw">
+              <img src="/img/app/kontakt-light-390.webp" srcset="/img/app/kontakt-light-390.webp 390w, /img/app/kontakt-light-780.webp 780w" sizes="(min-width: 56rem) 17rem, 60vw" width="390" height="844" alt="Bildschirmfoto der App: „Hilfe &amp; Kontakt“ mit der Frage „Worum geht’s?“ und den Auswahlmöglichkeiten Fehler melden, Frage, Idee oder Wunsch und Sonstiges." loading="lazy" decoding="async">
+            </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form" aria-labelledby="formular-titel">
+      <div class="contact-form-intro">
+        <h2 id="formular-titel">Oder hier schreiben.</h2>
+        <p>Wenn du die App gerade nicht zur Hand hast. Eine Antwort bekommst du nur, wenn du eine E-Mail-Adresse angibst.</p>
+        <p class="muted small">Lieber direkt per E-Mail? <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a></p>
+      </div>
+
+      <form id="kontaktformular" class="form" action="https://formspree.io/f/mdeekrrb" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Kontaktformular – KAG Vertretungsplan">
+
+        <fieldset class="choice">
+          <legend>Worum geht’s?</legend>
+          <div class="choice-options">
+            <label><input type="radio" name="Anliegen" value="Fehler melden" required><span>Fehler melden</span></label>
+            <label><input type="radio" name="Anliegen" value="Frage"><span>Frage</span></label>
+            <label><input type="radio" name="Anliegen" value="Idee oder Wunsch"><span>Idee oder Wunsch</span></label>
+            <label><input type="radio" name="Anliegen" value="Sonstiges"><span>Sonstiges</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="nachricht">Deine Nachricht</label>
+          <textarea id="nachricht" name="Nachricht" rows="6" maxlength="5000" required aria-describedby="nachricht-hinweis"></textarea>
+          <p class="field-hint" id="nachricht-hinweis">Bei einem Fehler hilft: Was hast du gemacht, was ist passiert, welches Gerät?</p>
+        </div>
+
+        <div class="field">
+          <label for="email">E-Mail-Adresse <span class="optional">(freiwillig, für eine Antwort)</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false">
+        </div>
+
+        <div class="honeypot" aria-hidden="true">
+          <label for="gotcha">Bitte leer lassen</label>
+          <input id="gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <p class="form-note">Beim Absenden geht deine Nachricht über den Dienst Formspree (USA) an mich. Mehr dazu in der <a href="/datenschutz#kontakt">Datenschutzerklärung</a>.</p>
+
+        <button class="button button--large" type="submit">Nachricht senden</button>
+      </form>
+      <p id="formular-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
+      <ul>
+        <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
+        <li><a href="/hilfe">Hilfe</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
