@@ -394,17 +394,160 @@ code {
   font-size: 0.875rem;
 }
 
+/* Menü-Knopf (nur auf dem Handy und nur mit JavaScript sichtbar) */
+.menu-button {
+  display: none;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  border-color: var(--ink-muted);
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 1.05rem;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.menu-icon {
+  position: relative;
+  background: transparent;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -3px;
+}
+
+.menu-icon::after {
+  top: 3px;
+}
+
+.menu-open .menu-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-open .menu-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 @media (max-width: 47.99rem) {
   .site-header {
-    position: static;
+    position: relative;
   }
-  .site-nav {
+  .site-header .wrap {
+    flex-wrap: nowrap;
+    gap: var(--space-2);
+  }
+  .brand {
+    min-width: 0;
+    margin-right: auto;
+    gap: 0.4rem;
+    font-size: 0.9375rem;
+    letter-spacing: -0.015em;
+    white-space: nowrap;
+  }
+  .brand-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .header-cta {
+    flex: none;
+    order: 1;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+  .menu-button {
+    order: 2;
+  }
+
+  /* ohne JavaScript: Links in einer eigenen Zeile wie bisher */
+  html:not(.js-nav) .site-header .wrap {
+    flex-wrap: wrap;
+  }
+  html:not(.js-nav) .site-nav {
     order: 3;
     flex-basis: 100%;
     margin-left: 0;
   }
-  .header-cta {
-    margin-left: auto;
+
+  /* mit JavaScript: aufklappbares Menü */
+  .js-nav .menu-button {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  /* schmale Geräte: Logo-Symbol weglassen, damit der Name ganz hineinpasst */
+  @media (max-width: 24.37rem) {
+    .js-nav .brand img {
+      display: none;
+    }
+  }
+  /* sehr schmale Geräte: oben nur Schriftzug und Menü, „App öffnen“ steht groß im Inhalt */
+  @media (max-width: 22.37rem) {
+    .js-nav .header-cta {
+      display: none;
+    }
+  }
+  .js-nav .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    margin: 0;
+    padding: var(--space-2) var(--gutter) var(--space-6);
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 24px 40px -24px rgba(0, 0, 0, 0.35);
+  }
+  .js-nav .menu-open .site-nav {
+    display: block;
+  }
+  .js-nav .site-nav ul {
+    display: block;
+  }
+  .js-nav .site-nav li + li {
+    border-top: 1px solid var(--line);
+  }
+  .js-nav .site-nav a {
+    display: block;
+    padding: 0.9rem 0;
+    font-size: var(--step-2);
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .js-nav .site-nav a[aria-current="page"] {
+    color: var(--petrol);
+    text-decoration: none;
+  }
+  .js-nav .site-nav a[aria-current="page"]::after {
+    content: " ·";
   }
 }
 
@@ -957,6 +1100,22 @@ code {
   .button,
   .faq summary {
     transition: color 0.15s ease, background-color 0.15s ease, text-decoration-thickness 0.15s ease;
+  }
+
+  .menu-icon::before,
+  .menu-icon::after {
+    transition: transform 0.2s ease, top 0.2s ease;
+  }
+
+  .js-nav .menu-open .site-nav {
+    animation: menu-in 0.18s ease-out;
+  }
+
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
   }
 
   @supports (animation-timeline: view()) {

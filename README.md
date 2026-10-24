@@ -3,7 +3,7 @@
 Statische Website mit Startseite, Hilfe, Impressum und Datenschutzerklärung für die Web-App
 [KAG Vertretungsplan](https://vertretung-kag.vercel.app).
 
-HTML/CSS mit einem kleinen eigenen Skript: kein Build-Schritt, keine Cookies, keine Analytics, keine externen Skripte.
+HTML/CSS mit zwei kleinen eigenen Skripten: kein Build-Schritt, keine Cookies, keine Analytics, keine externen Skripte.
 Die Schriften (Source Serif 4 für Überschriften, Instrument Sans für Text; SIL Open Font License)
 liegen selbst gehostet unter `fonts/` – es wird nichts von Google Fonts o. Ä. geladen.
 
@@ -16,6 +16,7 @@ liegen selbst gehostet unter `fonts/` – es wird nichts von Google Fonts o. Ä.
 | `404.html` | Fehlerseite |
 | `styles.css`, `favicon.svg` | gemeinsame Gestaltung (Hell/Dunkel nach Systemeinstellung) |
 | `fonts/` | selbst gehostete Schriften (WOFF2, nur lateinischer Zeichensatz) mit Lizenzen |
+| `nav.js` | Menü-Knopf auf dem Handy (ohne JavaScript bleiben die Links sichtbar) |
 | `motion.js` | Scroll-Bewegung für Browser ohne CSS-Scroll-Animationen (nur Startseite) |
 | `img/app/` | Bildschirmfotos der App (AVIF + WebP, hell/dunkel, je zwei Größen) für die Startseite |
 | `vercel.json` | saubere URLs ohne `.html` und Sicherheits-Header (u. a. strikte Content-Security-Policy; `font-src 'self'` und `script-src 'self'` nur für eigene Dateien) |

@@ -11,14 +11,16 @@
   <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
+  <script src="/nav.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="24" height="24">KAG Vertretungsplan</a>
-      <nav class="site-nav" aria-label="Hauptnavigation">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="24" height="24"><span class="brand-name">KAG Vertretungsplan</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="hauptnavigation" aria-label="Menü öffnen"><span class="menu-icon" aria-hidden="true"></span></button>
+      <nav class="site-nav" id="hauptnavigation" aria-label="Hauptnavigation">
         <ul>
           <li><a href="/hilfe">Hilfe</a></li>
           <li><a href="/datenschutz" aria-current="page">Datenschutz</a></li>
@@ -237,7 +239,7 @@
             <li>kein Tracking über Websites oder Tage hinweg, keine Profilbildung,</li>
             <li>keine Werbung und kein Verkauf von Daten,</li>
             <li>keine Social-Media-Plugins,</li>
-            <li>keine externen Schriftarten oder Skripte von Drittanbietern (abgesehen von der Statistik nach Abschnitt 3, die über die eigene Domain der App ausgeliefert wird); die Schriften dieser Informationsseite liegen auf dem eigenen Server; ebenso das kleine Skript der Startseite für die Scroll-Bewegung, das nichts speichert und nichts sendet,</li>
+            <li>keine externen Schriftarten oder Skripte von Drittanbietern (abgesehen von der Statistik nach Abschnitt 3, die über die eigene Domain der App ausgeliefert wird); die Schriften dieser Informationsseite liegen auf dem eigenen Server; ebenso die beiden kleinen Skripte dieser Seite (Menü auf dem Handy, Scroll-Bewegung der Startseite), die nichts speichern und nichts senden,</li>
             <li>keine automatisierte Entscheidungsfindung im Sinne von Art. 22 DSGVO.</li>
           </ul>
         </section>
