@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hilfe – KAG Vertretungsplan</title>
   <meta name="description" content="Häufige Fragen zur Web-App „KAG Vertretungsplan“: installieren, Benachrichtigungen, Einstellungen, Ferien und Kontakt.">
-  <meta name="theme-color" content="#fbf8f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,18 +16,21 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26">KAG Vertretungsplan</a>
-    <nav class="site-nav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="/hilfe" aria-current="page">Hilfe</a></li>
-        <li><a href="/datenschutz">Datenschutz</a></li>
-        <li><a href="/impressum">Impressum</a></li>
-        <li><a href="/hilfe#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="24" height="24">KAG Vertretungsplan</a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="/hilfe" aria-current="page">Hilfe</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/hilfe#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="button header-cta" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+    </div>
   </header>
 
-  <main id="inhalt">
+  <main id="inhalt" class="page">
     <header class="page-head">
       <h1>Hilfe</h1>
       <p class="lead">Kurze Antworten auf die häufigsten Fragen zur App. Wenn etwas fehlt, schreib mir – Kontakt steht <a href="#kontakt">ganz unten</a>.</p>
@@ -167,12 +170,15 @@
   </main>
 
   <footer class="site-footer">
-    <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
-    <ul>
-      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
-      <li><a href="/impressum">Impressum</a></li>
-      <li><a href="/datenschutz">Datenschutz</a></li>
-    </ul>
+    <div class="wrap">
+      <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
+      <ul>
+        <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
+        <li><a href="/hilfe">Hilfe</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>

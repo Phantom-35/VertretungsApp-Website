@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutzerklärung – KAG Vertretungsplan</title>
   <meta name="description" content="Datenschutzerklärung der Web-App „KAG Vertretungsplan“: welche Daten verarbeitet werden, wozu und welche Rechte du hast.">
-  <meta name="theme-color" content="#fbf8f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,23 +16,38 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26">KAG Vertretungsplan</a>
-    <nav class="site-nav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="/hilfe">Hilfe</a></li>
-        <li><a href="/datenschutz" aria-current="page">Datenschutz</a></li>
-        <li><a href="/impressum">Impressum</a></li>
-        <li><a href="/hilfe#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="24" height="24">KAG Vertretungsplan</a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="/hilfe">Hilfe</a></li>
+          <li><a href="/datenschutz" aria-current="page">Datenschutz</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/hilfe#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="button header-cta" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+    </div>
   </header>
 
-  <main id="inhalt">
+  <main id="inhalt" class="page">
     <header class="page-head">
       <h1>Datenschutz&shy;erklärung</h1>
       <p class="lead">Diese Datenschutzerklärung gilt für die Web-App „KAG Vertretungsplan“ unter <a href="https://vertretung-kag.vercel.app" rel="noopener">vertretung-kag.vercel.app</a> (im Folgenden „App“) und für diese Informationsseite. Sie erklärt, welche personenbezogenen Daten dabei verarbeitet werden, wozu, auf welcher Rechtsgrundlage und welche Rechte du hast.</p>
-      <p class="meta">Stand: 17. Oktober 2026</p>
+      <p class="meta">Stand: 24. Oktober 2026</p>
     </header>
+
+    <section class="summary" aria-labelledby="kurzfassung">
+      <h2 id="kurzfassung">Das Wichtigste in Kürze</h2>
+      <ul>
+        <li>Kein Konto, keine Namen, keine Cookies, keine Werbung, kein Tracking. Die App speichert keine E-Mail-Adressen.</li>
+        <li>Deine Klasse, Kurse und Einstellungen werden auf deinem Gerät gespeichert – auf dem Server nur, wenn du Benachrichtigungen einschaltest.</li>
+        <li>Beim Aufruf fallen technisch notwendige Server-Logdaten (u. a. IP-Adresse) beim Hoster Vercel an.</li>
+        <li>Die App erstellt eine anonyme Nutzungsstatistik ohne Cookies.</li>
+        <li>Nur wenn du Push-Benachrichtigungen einschaltest, werden deine Push-Adresse und deine Auswahl auf einem Server gespeichert. Schaltest du Push aus oder setzt du die App zurück, werden diese Daten sofort gelöscht.</li>
+        <li>Schreibst du mir über „Hilfe &amp; Kontakt“, wird deine Nachricht über den Dienst ntfy.sh (USA) an mein Handy weitergeleitet; auf dem Server der App wird sie nicht gespeichert. Das ist freiwillig – du kannst mir auch eine normale E-Mail schreiben.</li>
+      </ul>
+    </section>
 
     <div class="with-toc">
       <nav class="toc" aria-labelledby="toc-titel">
@@ -59,18 +74,6 @@
       </nav>
 
       <div class="prose">
-        <section aria-labelledby="kurzfassung">
-          <h2 id="kurzfassung">Das Wichtigste in Kürze</h2>
-          <ul>
-            <li>Kein Konto, keine Namen, keine Cookies, keine Werbung, kein Tracking. Die App speichert keine E-Mail-Adressen.</li>
-            <li>Deine Klasse, Kurse und Einstellungen werden auf deinem Gerät gespeichert – auf dem Server nur, wenn du Benachrichtigungen einschaltest.</li>
-            <li>Beim Aufruf fallen technisch notwendige Server-Logdaten (u. a. IP-Adresse) beim Hoster Vercel an.</li>
-            <li>Die App erstellt eine anonyme Nutzungsstatistik ohne Cookies.</li>
-            <li>Nur wenn du Push-Benachrichtigungen einschaltest, werden deine Push-Adresse und deine Auswahl auf einem Server gespeichert. Schaltest du Push aus oder setzt du die App zurück, werden diese Daten sofort gelöscht.</li>
-            <li>Schreibst du mir über „Hilfe &amp; Kontakt“, wird deine Nachricht über den Dienst ntfy.sh (USA) an mein Handy weitergeleitet; auf dem Server der App wird sie nicht gespeichert. Das ist freiwillig – du kannst mir auch eine normale E-Mail schreiben.</li>
-          </ul>
-        </section>
-
         <section aria-labelledby="verantwortlicher">
           <h2 id="verantwortlicher"><span class="section-no">1</span> Verantwortlicher</h2>
           <p>Verantwortlich für die Datenverarbeitung im Sinne von Art. 4 Nr. 7 der Datenschutz-Grundverordnung (DSGVO) ist:</p>
@@ -217,6 +220,7 @@
             <li><strong>Benachrichtigungen:</strong> Um Änderungen zu erkennen, liegt in der Datenbank bei Upstash (siehe <a href="#push-daten">Abschnitt 5.1</a>) eine Liste der Einträge ab dem aktuellen Tag (Datum, Klasse, Stunde, Art der Änderung, Lehrkraft-Kürzel, Raum, Fach, Hinweistext). Diese Liste wird bei jeder Prüfung, etwa alle 10 Minuten, vollständig überschrieben; Einträge vergangener Tage werden dabei entfernt.</li>
             <li><strong>Dein Gerät:</strong> Die Offline-Kopie des zuletzt geladenen Plans wird bei jedem Laden überschrieben und mit „App zurücksetzen“ gelöscht (siehe <a href="#lokal">Abschnitt 4</a>).</li>
           </ul>
+          <p><strong>Bildschirmfotos auf dieser Website:</strong> Die Startseite zeigt eigene Bildschirmfotos der App, aufgenommen im Oktober 2026. Sie zeigen einen echten Ausschnitt des öffentlich zugänglichen Plans, darunter Lehrkräfte-Kürzel. Daten von Nutzerinnen und Nutzern sind darauf nicht zu sehen. Die Bilder liegen auf dem eigenen Server und werden nicht von fremden Diensten geladen.</p>
           <p>Betroffene Lehrkräfte können der Verarbeitung nach Art. 21 DSGVO widersprechen; bitte wende dich dazu an die oben genannte E-Mail-Adresse.</p>
         </section>
 
@@ -297,19 +301,22 @@
           <p>Die Bereitstellung von Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne die technisch notwendigen Verbindungsdaten (Abschnitt 2) kann die App nicht ausgeliefert werden; ohne Push-Anmeldung kannst du die App weiterhin vollständig nutzen, erhältst aber keine Benachrichtigungen.</p>
           <p>Die Verbindung zur App und zu dieser Seite ist per HTTPS (TLS) verschlüsselt.</p>
           <p>Ich passe diese Datenschutzerklärung an, wenn sich die App oder die Rechtslage ändert. Es gilt die jeweils hier veröffentlichte Fassung.</p>
-          <p class="meta">Stand: 17. Oktober 2026</p>
+          <p class="meta">Stand: 24. Oktober 2026</p>
         </section>
       </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
-    <ul>
-      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
-      <li><a href="/impressum">Impressum</a></li>
-      <li><a href="/datenschutz">Datenschutz</a></li>
-    </ul>
+    <div class="wrap">
+      <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
+      <ul>
+        <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
+        <li><a href="/hilfe">Hilfe</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>

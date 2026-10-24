@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KAG Vertretungsplan – Hilfe und Informationen</title>
-  <meta name="description" content="Hilfe, häufige Fragen, Impressum und Datenschutzerklärung zur Web-App „KAG Vertretungsplan“ für das Konrad-Adenauer-Gymnasium Meckenheim.">
-  <meta name="theme-color" content="#fbf8f1" media="(prefers-color-scheme: light)">
+  <title>KAG Vertretungsplan – der Vertretungsplan für deine Klasse</title>
+  <meta name="description" content="Die Web-App „KAG Vertretungsplan“ für das Konrad-Adenauer-Gymnasium Meckenheim: so funktioniert sie, so installierst du sie, häufige Fragen und Kontakt.">
+  <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,64 +16,287 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26">KAG Vertretungsplan</a>
-    <nav class="site-nav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="/hilfe">Hilfe</a></li>
-        <li><a href="/datenschutz">Datenschutz</a></li>
-        <li><a href="/impressum">Impressum</a></li>
-        <li><a href="/hilfe#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="24" height="24">KAG Vertretungsplan</a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="/hilfe">Hilfe</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/hilfe#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="button header-cta" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+    </div>
   </header>
 
   <main id="inhalt">
-    <div class="home-intro">
-      <h1>Der Vertretungsplan für deine Klasse</h1>
-      <p class="lead">Die App zeigt dir den Vertretungsplan des Konrad-Adenauer-Gymnasiums Meckenheim nur für deine Klasse oder, in der Oberstufe, für deine Kurse – auch offline, kostenlos und ohne Konto. Auf Wunsch meldet sie Änderungen per Benachrichtigung.</p>
-      <div class="actions">
-        <a class="button" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
-        <a href="/hilfe#installieren">So legst du sie auf den Home-Bildschirm</a>
+    <section class="hero" aria-labelledby="titel">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Konrad-Adenauer-Gymnasium Meckenheim</p>
+          <h1 id="titel">Der Vertretungs&shy;plan. <span class="continue">Nur für deine Klasse.</span></h1>
+          <p class="lead">Die App zeigt dir, was sich für deine Klasse ändert – in der Oberstufe für deine Kurse. Auf Wunsch meldet sie sich, sobald sich der Plan für deine Klasse ändert.</p>
+          <div class="actions">
+            <a class="button button--large" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+            <a class="link-arrow" href="#installieren">Auf den Home-Bildschirm legen</a>
+          </div>
+          <ul class="hero-facts" aria-label="Das Wichtigste">
+            <li>Kostenlos</li>
+            <li>Ohne Konto</li>
+            <li>Auch offline</li>
+            <li>Mit Benachrichtigungen</li>
+          </ul>
+        </div>
+        <div class="hero-stage">
+          <div class="phone phone--back">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/ferien-dark-390.avif 390w, /img/app/ferien-dark-780.avif 780w" sizes="(min-width: 62rem) 18rem, 46vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/ferien-dark-390.webp 390w, /img/app/ferien-dark-780.webp 780w" sizes="(min-width: 62rem) 18rem, 46vw">
+              <source type="image/avif" srcset="/img/app/ferien-light-390.avif 390w, /img/app/ferien-light-780.avif 780w" sizes="(min-width: 62rem) 18rem, 46vw">
+              <img src="/img/app/ferien-light-390.webp" srcset="/img/app/ferien-light-390.webp 390w, /img/app/ferien-light-780.webp 780w" sizes="(min-width: 62rem) 18rem, 46vw" width="390" height="844" alt="Bildschirmfoto der App in den Herbstferien: Ferienkarte „Schöne Herbstferien!“ mit dem Knopf „Plan für Mo., 02.11. ansehen“." fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+          <div class="phone phone--front">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/plan-dark-390.avif 390w, /img/app/plan-dark-780.avif 780w" sizes="(min-width: 62rem) 18rem, 46vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/plan-dark-390.webp 390w, /img/app/plan-dark-780.webp 780w" sizes="(min-width: 62rem) 18rem, 46vw">
+              <source type="image/avif" srcset="/img/app/plan-light-390.avif 390w, /img/app/plan-light-780.avif 780w" sizes="(min-width: 62rem) 18rem, 46vw">
+              <img src="/img/app/plan-light-390.webp" srcset="/img/app/plan-light-390.webp 390w, /img/app/plan-light-780.webp 780w" sizes="(min-width: 62rem) 18rem, 46vw" width="390" height="844" alt="Bildschirmfoto der App: Plan der Klasse 6B für Montag, 02.11., mit vier Änderungen." fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="home-grid">
-      <section aria-labelledby="fragen">
-        <h2 id="fragen">Häufige Fragen</h2>
-        <ol class="topic-list">
-          <li><a href="/hilfe#was"><span class="topic-title">Was ist die App?</span><span class="topic-text">Wofür sie gedacht ist und warum es sie nicht im App Store gibt.</span></a></li>
-          <li><a href="/hilfe#installieren"><span class="topic-title">Installieren</span><span class="topic-text">iPhone und iPad, Android, PC und Mac.</span></a></li>
-          <li><a href="/hilfe#benachrichtigungen"><span class="topic-title">Benachrichtigungen</span><span class="topic-text">Arten, tägliche Überblicke, Nachtruhe – und was tun, wenn nichts ankommt.</span></a></li>
-          <li><a href="/hilfe#einstellungen"><span class="topic-title">Einstellungen</span><span class="topic-text">Was sich hinter dem Zahnrad verbirgt.</span></a></li>
-          <li><a href="/hilfe#hilfe-kontakt"><span class="topic-title">Hilfe &amp; Kontakt in der App</span><span class="topic-text">Fehler melden, Fragen stellen, Ideen schicken.</span></a></li>
-          <li><a href="/hilfe#ferien"><span class="topic-title">Ferien und Feiertage</span><span class="topic-text">Was die App in den Schulferien zeigt.</span></a></li>
-          <li><a href="/hilfe#computer"><span class="topic-title">Am PC, Mac oder iPad</span><span class="topic-text">Alle Tage nebeneinander auf großen Bildschirmen.</span></a></li>
-          <li><a href="/hilfe#altes-geraet"><span class="topic-title">Zu altes Gerät</span><span class="topic-text">Wenn die App einen Hinweis statt des Plans zeigt.</span></a></li>
-          <li><a href="/hilfe#aktuell"><span class="topic-title">Sind die Angaben aktuell?</span><span class="topic-text">Wie oft die App den Plan prüft und was im Zweifel gilt.</span></a></li>
+    <section class="section" aria-labelledby="so-gehts">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">So funktioniert’s</p>
+          <h2 id="so-gehts">Stunde für Stunde erklärt.</h2>
+          <p class="lead">Sechs Schritte, von der ersten Auswahl bis zum QR-Code für deine Freunde. Die Bilder sind echte Aufnahmen der App vom Oktober 2026.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-text">
+              <span class="lesson" aria-hidden="true"><small>STD.</small><span>1</span></span>
+              <h3>Klasse wählen</h3>
+              <p>Beim ersten Öffnen wählst du deine Klasse. In der Oberstufe wählst du zusätzlich deine Kurse über die Kürzel deiner Lehrkräfte. Die Auswahl bleibt <strong>auf deinem Gerät</strong>.</p>
+            </div>
+            <div class="step-media">
+              <div class="phone">
+                <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/choose-dark-390.avif 390w, /img/app/choose-dark-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/choose-dark-390.webp 390w, /img/app/choose-dark-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source type="image/avif" srcset="/img/app/choose-light-390.avif 390w, /img/app/choose-light-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <img src="/img/app/choose-light-390.webp" srcset="/img/app/choose-light-390.webp 390w, /img/app/choose-light-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw" width="390" height="844" alt="Bildschirmfoto der App vor der Auswahl: „Klasse wählen“ mit dem Auswahlfeld „Meine Klasse“." loading="lazy" decoding="async">
+            </picture>
+              </div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-text">
+              <span class="lesson" aria-hidden="true"><small>STD.</small><span>2</span></span>
+              <h3>Plan sehen</h3>
+              <p>Du siehst <strong>nur die Änderungen, die dich betreffen</strong>: Ausfälle, Vertretungen, Raumänderungen, Klausuren und Veranstaltungen – nach Tagen sortiert. Der zuletzt geladene Plan ist auch ohne Internet da.</p>
+            </div>
+            <div class="step-media">
+              <div class="phone">
+                <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/plan-dark-390.avif 390w, /img/app/plan-dark-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/plan-dark-390.webp 390w, /img/app/plan-dark-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source type="image/avif" srcset="/img/app/plan-light-390.avif 390w, /img/app/plan-light-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <img src="/img/app/plan-light-390.webp" srcset="/img/app/plan-light-390.webp 390w, /img/app/plan-light-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw" width="390" height="844" alt="Bildschirmfoto der App: Plan der Klasse 6B für Montag, 02.11., mit vier Veranstaltungen." loading="lazy" decoding="async">
+            </picture>
+              </div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-text">
+              <span class="lesson" aria-hidden="true"><small>STD.</small><span>3</span></span>
+              <h3>Benachrichtigungen</h3>
+              <p>Auf Wunsch kommt eine Nachricht, <strong>sobald sich der Plan für deine Klasse ändert</strong> – auch wenn die App geschlossen ist. Du wählst, worüber du informiert wirst, und bekommst auf Wunsch abends oder morgens einen Überblick. Nachts zwischen 21 und 6 Uhr ist Ruhe.</p>
+            </div>
+            <div class="step-media">
+              <div class="phone">
+                <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/notify-dark-390.avif 390w, /img/app/notify-dark-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/notify-dark-390.webp 390w, /img/app/notify-dark-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source type="image/avif" srcset="/img/app/notify-light-390.avif 390w, /img/app/notify-light-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <img src="/img/app/notify-light-390.webp" srcset="/img/app/notify-light-390.webp 390w, /img/app/notify-light-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw" width="390" height="844" alt="Bildschirmfoto der Einstellungen „Benachrichtigungen“: Schalter für Ausfälle &amp; EVA, Vertretungen &amp; Betreuung, Raumänderungen &amp; Verlegungen sowie Klausuren &amp; Veranstaltungen, darunter die täglichen Überblicke." loading="lazy" decoding="async">
+            </picture>
+              </div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-text">
+              <span class="lesson" aria-hidden="true"><small>STD.</small><span>4</span></span>
+              <h3>Ferienanzeige</h3>
+              <p>In den Schulferien in NRW zeigt die App eine Ferienkarte. Ist der Plan für die Zeit danach schon online, kannst du ihn <strong>mit einem Tipp vorab ansehen</strong>.</p>
+            </div>
+            <div class="step-media">
+              <div class="phone">
+                <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/ferien-dark-390.avif 390w, /img/app/ferien-dark-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/ferien-dark-390.webp 390w, /img/app/ferien-dark-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source type="image/avif" srcset="/img/app/ferien-light-390.avif 390w, /img/app/ferien-light-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <img src="/img/app/ferien-light-390.webp" srcset="/img/app/ferien-light-390.webp 390w, /img/app/ferien-light-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw" width="390" height="844" alt="Bildschirmfoto der App: Ferienkarte „Schöne Herbstferien! Frei bis Sa., 31.10.“ mit dem Knopf „Plan für Mo., 02.11. ansehen“." loading="lazy" decoding="async">
+            </picture>
+              </div>
+            </div>
+          </li>
         </ol>
-        <p class="small"><a href="/hilfe">Alle Antworten auf einer Seite</a></p>
-      </section>
+      </div>
 
-      <aside aria-label="Kontakt und Hinweise">
-        <section class="aside-block" aria-labelledby="kontakt">
+      <div class="band">
+        <div class="wrap">
+          <div class="step-text">
+            <span class="lesson" aria-hidden="true"><small>STD.</small><span>5</span></span>
+            <h3>Am PC, Mac oder iPad</h3>
+            <p>Auf großen Bildschirmen – am PC, am Mac oder auf dem iPad im Querformat – hat die App eine eigene Ansicht: <strong>alle Tage nebeneinander</strong>. Auf dem Handy bleibt alles wie gewohnt.</p>
+          </div>
+          <div class="step-media">
+            <div class="browser">
+              <div class="browser-bar" aria-hidden="true">vertretung-kag.vercel.app</div>
+              <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/desktop-dark-1080.avif 1080w, /img/app/desktop-dark-2160.avif 2160w" sizes="(min-width: 64rem) 64rem, 92vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/desktop-dark-1080.webp 1080w, /img/app/desktop-dark-2160.webp 2160w" sizes="(min-width: 64rem) 64rem, 92vw">
+              <source type="image/avif" srcset="/img/app/desktop-light-1080.avif 1080w, /img/app/desktop-light-2160.avif 2160w" sizes="(min-width: 64rem) 64rem, 92vw">
+              <img src="/img/app/desktop-light-1080.webp" srcset="/img/app/desktop-light-1080.webp 1080w, /img/app/desktop-light-2160.webp 2160w" sizes="(min-width: 64rem) 64rem, 92vw" width="1080" height="450" alt="Bildschirmfoto der App am Computer: Plan der Klasse 9A mit Montag, 02.11., und Dienstag, 03.11., nebeneinander." loading="lazy" decoding="async">
+            </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <ol class="steps" start="6">
+          <li class="step">
+            <div class="step-text">
+              <span class="lesson" aria-hidden="true"><small>STD.</small><span>6</span></span>
+              <h3>App weitergeben</h3>
+              <p>Unter Einstellungen → „App weitergeben“ zeigt die App einen <strong>QR-Code</strong>: Kamera drauf, Klasse wählen, fertig. Mit „Aushang drucken“ wird daraus ein Aushang zum Aufhängen.</p>
+            </div>
+            <div class="step-media">
+              <div class="phone">
+                <picture>
+              <source media="(prefers-color-scheme: dark)" type="image/avif" srcset="/img/app/qr-dark-390.avif 390w, /img/app/qr-dark-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/app/qr-dark-390.webp 390w, /img/app/qr-dark-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <source type="image/avif" srcset="/img/app/qr-light-390.avif 390w, /img/app/qr-light-780.avif 780w" sizes="(min-width: 56rem) 19rem, 60vw">
+              <img src="/img/app/qr-light-390.webp" srcset="/img/app/qr-light-390.webp 390w, /img/app/qr-light-780.webp 780w" sizes="(min-width: 56rem) 19rem, 60vw" width="390" height="844" alt="Bildschirmfoto der App: „App weitergeben“ mit QR-Code für vertretung-kag.vercel.app und den Knöpfen „Link teilen“ und „Aushang drucken“." loading="lazy" decoding="async">
+            </picture>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="installieren">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Installieren</p>
+          <h2 id="installieren">Auf den Home-Bildschirm legen.</h2>
+          <p class="lead">Die App gibt es nicht im App Store oder bei Google Play. Du öffnest sie im Browser und legst sie dir von dort auf den Home-Bildschirm.</p>
+        </div>
+        <ul class="install">
+          <li class="card">
+            <h3>iPhone und iPad</h3>
+            <ol>
+              <li>Die App in Safari öffnen.</li>
+              <li>Auf „Teilen“ tippen.</li>
+              <li>„Zum Home-Bildschirm“ wählen.</li>
+            </ol>
+          </li>
+          <li class="card">
+            <h3>Android</h3>
+            <ol>
+              <li>Die App in Chrome öffnen.</li>
+              <li>Das Menü öffnen (drei Punkte).</li>
+              <li>„App installieren“ wählen.</li>
+            </ol>
+          </li>
+          <li class="card">
+            <h3>PC und Mac</h3>
+            <ol>
+              <li>Die App im Browser öffnen.</li>
+              <li>Auf das Installieren-Symbol rechts in der Adressleiste klicken.</li>
+            </ol>
+          </li>
+        </ul>
+        <p class="actions"><a class="link-arrow" href="/hilfe#installieren">Mehr in der Hilfe</a> <span class="muted small">Die App zeigt die Schritte auch selbst: Einstellungen → „Als App installieren“.</span></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="fragen">
+      <div class="wrap split">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Hilfe</p>
+            <h2 id="fragen">Häufige Fragen.</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Was kostet die App?</summary>
+              <div class="answer"><p>Nichts. Die App ist kostenlos, ohne Werbung und braucht kein Konto.</p></div>
+            </details>
+            <details>
+              <summary>Bekomme ich Benachrichtigungen auf dem iPhone?</summary>
+              <div class="answer"><p>Ja – auf iPhone und iPad aber nur in der installierten App, nicht in Safari. <a href="/hilfe#benachrichtigungen">Mehr zu Benachrichtigungen</a></p></div>
+            </details>
+            <details>
+              <summary>Wann kommen die täglichen Überblicke?</summary>
+              <div class="answer"><p>Abends ein Überblick für morgen (17, 18, <strong>19</strong> oder 20 Uhr) und morgens einer für heute (6:00, <strong>6:30</strong> oder 7:00 Uhr); fett ist die Voreinstellung. Kommt der Plan für morgen erst spät, folgt der Überblick sofort danach (bis 21 Uhr).</p></div>
+            </details>
+            <details>
+              <summary>Es kommt keine Benachrichtigung an. Was tun?</summary>
+              <div class="answer"><p>Prüfe, ob Mitteilungen in den Systemeinstellungen erlaubt sind und ob ein Fokus oder „Nicht stören“ an ist. Mit „Testnachricht senden“ kannst du es ausprobieren. Hilft das nicht, melde es über „Hilfe &amp; Kontakt“ in der App.</p></div>
+            </details>
+            <details>
+              <summary>Was zeigt die App in den Ferien?</summary>
+              <div class="answer"><p>Eine Ferienkarte. Ist der Plan für die Zeit danach schon online, gibt es die Knöpfe „Plan für … ansehen“ und „Letzten Plan ansehen“. <a href="/hilfe#ferien">Mehr zu Ferien und Feiertagen</a></p></div>
+            </details>
+            <details>
+              <summary>Mein Gerät ist zu alt – was nun?</summary>
+              <div class="answer"><p>Unter iOS 16.4 und in sehr alten Browsern zeigt die App stattdessen einen Hinweis mit Link zum Original-Plan der Schule.</p></div>
+            </details>
+            <details>
+              <summary>Sind die Angaben aktuell?</summary>
+              <div class="answer"><p>Die App prüft den Plan der Schule regelmäßig. Im Zweifel gilt aber immer der Aushang bzw. der Original-Plan der Schule.</p></div>
+            </details>
+            <details>
+              <summary>Was passiert mit meinen Daten?</summary>
+              <div class="answer"><p>Deine Klasse und deine Einstellungen bleiben auf deinem Gerät. Nur wenn du Benachrichtigungen einschaltest, speichert der Server, was er dafür braucht. <a href="/datenschutz">Zur Datenschutzerklärung</a></p></div>
+            </details>
+          </div>
+          <p class="actions"><a class="link-arrow" href="/hilfe">Alle Fragen und Antworten</a></p>
+        </div>
+
+        <aside class="contact" aria-label="Kontakt und Hinweis">
           <h2 id="kontakt">Kontakt</h2>
-          <p>Fehler gefunden, eine Frage oder eine Idee? In der App geht das am schnellsten über Einstellungen → „Hilfe &amp; Kontakt“. Oder schreib eine E-Mail an <a href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a>.</p>
-        </section>
-        <section class="aside-block" aria-labelledby="hinweis">
+          <p>Fehler gefunden, eine Frage oder eine Idee? In der App geht das am schnellsten über Einstellungen → „Hilfe &amp; Kontakt“. Oder schreib eine E-Mail:</p>
+          <a class="mail" href="mailto:phandevstudios@gmx.de">phandevstudios@gmx.de</a>
           <h2 id="hinweis">Kein Angebot der Schule</h2>
-          <p class="muted">Der KAG Vertretungsplan ist ein privates, nicht kommerzielles Projekt. Die Angaben stammen aus dem öffentlich zugänglichen Vertretungsplan der Schule und werden ohne Gewähr angezeigt. Maßgeblich ist immer der Plan der Schule.</p>
-        </section>
-      </aside>
-    </div>
+          <p class="notice">Der KAG Vertretungsplan ist ein privates, nicht kommerzielles Projekt. Die Angaben stammen aus dem öffentlich zugänglichen Vertretungsplan der Schule und werden ohne Gewähr angezeigt. Maßgeblich ist immer der Plan der Schule.</p>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
-    <ul>
-      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
-      <li><a href="/impressum">Impressum</a></li>
-      <li><a href="/datenschutz">Datenschutz</a></li>
-    </ul>
+    <div class="wrap">
+      <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
+      <ul>
+        <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
+        <li><a href="/hilfe">Hilfe</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>

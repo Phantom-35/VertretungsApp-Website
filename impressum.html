@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Impressum – KAG Vertretungsplan</title>
   <meta name="description" content="Impressum der Web-App „KAG Vertretungsplan“.">
-  <meta name="theme-color" content="#fbf8f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f5efe2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12191b" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,18 +16,21 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
   <header class="site-header">
-    <a class="brand" href="/"><img src="/favicon.svg" alt="" width="26" height="26">KAG Vertretungsplan</a>
-    <nav class="site-nav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="/hilfe">Hilfe</a></li>
-        <li><a href="/datenschutz">Datenschutz</a></li>
-        <li><a href="/impressum" aria-current="page">Impressum</a></li>
-        <li><a href="/hilfe#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="24" height="24">KAG Vertretungsplan</a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="/hilfe">Hilfe</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+          <li><a href="/impressum" aria-current="page">Impressum</a></li>
+          <li><a href="/hilfe#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="button header-cta" href="https://vertretung-kag.vercel.app" rel="noopener">App öffnen</a>
+    </div>
   </header>
 
-  <main id="inhalt">
+  <main id="inhalt" class="page">
     <header class="page-head">
       <h1>Impressum</h1>
     </header>
@@ -68,7 +71,7 @@
 
       <section aria-labelledby="urheberrecht">
         <h2 id="urheberrecht">Urheberrecht und Marken</h2>
-        <p>Eigene Texte, Gestaltung und Programmcode dieses Angebots unterliegen dem Urheberrecht. Rechte an den Inhalten des Vertretungsplans liegen bei der Schule bzw. den jeweiligen Rechteinhabern. Genannte Namen und Marken (z. B. Untis) gehören ihren jeweiligen Inhabern. Die verwendeten Schriften Source Serif 4 und Instrument Sans stehen unter der SIL Open Font License.</p>
+        <p>Eigene Texte, Gestaltung und Programmcode dieses Angebots unterliegen dem Urheberrecht. Rechte an den Inhalten des Vertretungsplans liegen bei der Schule bzw. den jeweiligen Rechteinhabern. Genannte Namen und Marken (z. B. Untis) gehören ihren jeweiligen Inhabern. Die verwendeten Schriften Source Serif 4 und Instrument Sans stehen unter der SIL Open Font License. Die Bildschirmfotos der App auf dieser Website sind eigene Aufnahmen.</p>
       </section>
 
       <section aria-labelledby="streitbeilegung">
@@ -84,12 +87,15 @@
   </main>
 
   <footer class="site-footer">
-    <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
-    <ul>
-      <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
-      <li><a href="/impressum">Impressum</a></li>
-      <li><a href="/datenschutz">Datenschutz</a></li>
-    </ul>
+    <div class="wrap">
+      <p>Privates, nicht kommerzielles Projekt – kein offizielles Angebot des Konrad-Adenauer-Gymnasiums Meckenheim. Maßgeblich ist immer der Plan der Schule.</p>
+      <ul>
+        <li><a href="https://vertretung-kag.vercel.app" rel="noopener">Zur App</a></li>
+        <li><a href="/hilfe">Hilfe</a></li>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>

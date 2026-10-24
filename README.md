@@ -16,7 +16,14 @@ liegen selbst gehostet unter `fonts/` – es wird nichts von Google Fonts o. Ä.
 | `404.html` | Fehlerseite |
 | `styles.css`, `favicon.svg` | gemeinsame Gestaltung (Hell/Dunkel nach Systemeinstellung) |
 | `fonts/` | selbst gehostete Schriften (WOFF2, nur lateinischer Zeichensatz) mit Lizenzen |
+| `img/app/` | Bildschirmfotos der App (AVIF + WebP, hell/dunkel, je zwei Größen) für die Startseite |
 | `vercel.json` | saubere URLs ohne `.html` und Sicherheits-Header (u. a. strikte Content-Security-Policy; `font-src 'self'` für die eigenen Schriften) |
+
+Kein JavaScript: Die 3D-Bewegung der Bildschirmfotos auf der Startseite läuft über
+CSS-Scroll-Animationen und ist bei „Bewegung reduzieren“ abgeschaltet. Die Bildschirmfotos
+wurden mit Playwright von der App aufgenommen (Vercel-Statistik blockiert, Einführung
+übersprungen, keine Benachrichtigungen eingeschaltet); das Aufnahme-Skript liegt bewusst
+nicht im Repository.
 
 Kopf und Fuß sind in allen Seiten gleich; bei Änderungen an der Navigation bitte in allen
 HTML-Dateien anpassen.
